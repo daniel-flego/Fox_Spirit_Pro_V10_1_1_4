@@ -1,0 +1,111 @@
+
+/**
+This is a good tutorial/info for using
+flexbox and css grids
+
+https://getflywheel.com/layout/combine-flexbox-and-css-grids-for-layouts-how-to/
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+**/
+
+#item-submit__signup {
+  user-select: none;
+}
+
+#button-submit__signup {
+  visibility: hidden;
+  display: none;
+}
+
+#input-yes:hover {
+  cursor: pointer;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  .next__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left,
+  .right {
+    background-color: $light-grey;
+    color: $purple;
+    font-size: 16px;
+    font-family: montserrat;
+    
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+  }
+
+  .left:hover,
+  .right:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .left {
+    margin-right: 10px;
+  }
+
+  .right {
+    margin-left: 10px;
+  }
+
+  .page {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  /**
+    - When no-prev is present (start with)
+      - The left link is in-active 
+  */
+
+  &.noPrev .left {
+    opacity: 0.9;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+
+  /********* Morphing *************
+    - When morph is added 
+      - Change right link to submit button
+      - Get rid of the middle page info
+      - Make left link active
+  */
+
+  &.morph .next__container {
+    visibility: hidden;
+    display: none;
+  }
+
+  &.morph #button-submit__signup {
+    visibility: initial;
+    display: initial;
+  }
+
+  &.morph #button-submit__signup:hover {
+    cursor: pointer;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

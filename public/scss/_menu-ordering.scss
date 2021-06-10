@@ -1,0 +1,661 @@
+/** 
+  The order of the elements on loading 
+  When the header is uncollapsed.
+**/
+
+/** On Loading Mobile Size **/
+@include mobile-size {
+  nav {
+    .section-nav {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-toggle                {   order: 2; }
+
+      /** Drop Down - Out Of Site **/
+      #item-login                 {   order: 3; }
+      #item-signup                {   order: 4; }
+      //* Menu *
+      #item-menu__menu            {   order: 5; }
+      #item-news__menu            {   order: 6; }
+      #item-about__menu           {   order: 7; }
+      #item-booking__menu         {   order: 8; }
+      #item-contact__menu         {   order: 9; }
+      //* Login *
+      #item-login__login          {   order: 10; }
+      #item-username__login       {   order: 11; }
+      #item-password__login       {   order: 12; }
+      #item-submit__login         {   order: 13; }
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 14; }
+      #item-firstname__signup     {   order: 15; }
+      #item-lastname__signup      {   order: 16; }
+
+      #item-address__signup       {   order: 17; }
+      #item-phone__signup         {   order: 18; }
+      #item-email__signup         {   order: 19; }
+
+      #item-gender__signup        {   order: 20; }
+      #item-dob__signup           {   order: 21; }
+
+      // Page 2
+      #item-username__signup      {   order: 22; }
+      #item-password__signup      {   order: 23; }
+      #item-repeat__signup        {   order: 24; }
+      #item-subscribe__signup     {   order: 25; }
+      #item-submit__signup        {   order: 26; }
+      
+    }
+  }
+}
+
+// Continue on from here!!
+// Change Ordering
+// Change Dropdown sizes
+// Check Visability of Elements Corresponding
+
+/** On Loading Tablet Size **/
+@include tablet-size {
+  nav {
+    .section-nav {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-login                 {   order: 2; }
+      #item-signup                {   order: 3; }
+      #item-toggle                {   order: 4; }
+      
+      /** Drop Down - Out Of Site **/
+      //* Menu */
+      #item-menu__menu            {   order: 5; }
+      #item-news__menu            {   order: 6; }
+      #item-about__menu           {   order: 7; }
+      #item-booking__menu         {   order: 8; }
+      #item-contact__menu         {   order: 9; }
+
+      //* Login */
+      #item-login__login          {   order: 10; }
+      #item-username__login       {   order: 11; }
+      #item-password__login       {   order: 12; }
+      #item-submit__login         {   order: 13; }
+      //* Signup */
+      // Page 1
+      #item-signup__signup        {   order: 14; }
+      #item-firstname__signup     {   order: 15; }
+      #item-lastname__signup      {   order: 16; }
+      #item-email__signup         {   order: 17; }
+      #item-address__signup       {   order: 18; }
+      #item-phone__signup         {   order: 19; }
+      // Page 2
+      #item-username__signup      {   order: 20; }
+      #item-password__signup      {   order: 21; }
+      #item-repeat__signup        {   order: 22; }
+      #item-subscribe__signup     {   order: 23; }
+      #item-submit__signup        {   order: 24; }
+      
+      /** Elements Not In Use **/
+      //#item-login__login          {   order: 25;  }
+      //#item-signup__signup        {   order: 26;  }
+      
+    }
+  }
+}
+
+/** On Loading Desktop Size **/
+@include desktop-size {
+  nav {
+    .section-nav {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      // Menu
+      #item-news__menu            {   order: 2; }
+      #item-about__menu           {   order: 3; }
+      #item-booking__menu         {   order: 4; }
+      #item-contact__menu         {   order: 5; }
+      
+      #item-username__login       {   order: 6; }
+      #item-password__login       {   order: 7; }
+      #item-submit__login         {   order: 8; }
+
+      #item-signup                {   order: 9; }
+      
+      #item-signup__signup        {   order: 10; }
+      #item-firstname__signup     {   order: 11; }
+      #item-lastname__signup      {   order: 12; }
+      #item-email__signup         {   order: 13; }
+      #item-address__signup       {   order: 14; }
+      #item-phone__signup         {   order: 15; }
+
+      #item-username__signup      {   order: 16; }
+      #item-password__signup      {   order: 17; }
+      #item-repeat__signup        {   order: 18; }
+      #item-subscribe__signup     {   order: 19; }
+      #item-submit__signup        {   order: 20; }
+
+      /** Out Of Site **/
+      /** Make these disappear **/
+      #item-toggle                {   order: 21; }
+      #item-login                 {   order: 22; }
+      #item-menu__menu            {   order: 23; }
+      #item-login__login          {   order: 24; }
+      
+    }
+  }
+
+}
+
+/** All The Drop Down Order Settings **/
+nav {
+  .section-nav {
+
+    /** Collapsed Sizes For Menu, Mobile Menu, login and Signup */
+    /** Collapsed Mobile Menu */
+    // This should be called collapsed__menu but working for mobile 
+    &.mobile-collapsed__menu {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-toggle                {   order: 2; }
+      /** Drop Down **/
+      #item-login                 {   order: 3; }
+      #item-signup                {   order: 4; }
+      //* Menu *
+      #item-menu__menu            {   order: 5; }
+      #item-news__menu            {   order: 6; }
+      #item-about__menu           {   order: 7; }
+      #item-booking__menu         {   order: 8; }      
+      #item-contact__menu         {   order: 9; }
+
+      /** Out Of Sight **/
+      //* Login *
+      #item-login__login          {   order: 10;
+                                      display: none; }
+      #item-username__login       {   order: 11;
+                                      display: none; }
+      #item-password__login       {   order: 12;
+                                      display: none; }
+      #item-submit__login         {   order: 13;
+                                      display: none; }
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 14;
+                                      display: none; }
+      #item-firstname__signup     {   order: 15;
+                                      display: none; }
+      #item-lastname__signup      {   order: 16;
+                                      display: none; }
+      #item-address__signup       {   order: 17;
+                                      display: none; }
+      #item-phone__signup         {   order: 18;
+                                      display: none; }
+      #item-email__signup         {   order: 19;
+                                      display: none; }
+
+      #item-gender__signup        {   order: 20;
+                                      display: none; }
+      #item-dob__signup           {   order: 21;
+                                      display: none; }
+
+      // Page 2
+      #item-username__signup      {   order: 22;
+                                      display: none; }
+      #item-password__signup      {   order: 23;
+                                      display: none; }
+      #item-repeat__signup        {   order: 24;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 25;
+                                      display: none; }
+      #item-submit__signup        {   order: 26;
+                                      display: none; }
+
+    }
+
+    /** Collapsed Menu For Tablet */
+    &.tablet-collapsed__menu {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-login                 {   order: 2; }
+      #item-signup                {   order: 3; }
+      #item-toggle                {   order: 4; }
+      /** Drop Down **/
+      // Menu
+      #item-menu__menu            {   order: 5; }
+      #item-news__menu            {   order: 6; }
+      #item-about__menu           {   order: 7; }
+      #item-booking__menu         {   order: 8; }      
+      #item-contact__menu         {   order: 9; }
+      /** Out Of Sight **/
+      //* Login */
+      #item-login__login          {   order: 10;
+                                      display: none; }
+      #item-username__login       {   order: 11;
+                                      display: none; }
+      #item-password__login       {   order: 12;
+                                      display: none; }
+      #item-submit__login         {   order: 13;
+                                      display: none; }
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 14;
+                                      display: none; }
+      #item-firstname__signup     {   order: 15;
+                                      display: none; }
+      #item-lastname__signup      {   order: 16;
+                                      display: none; }
+
+      #item-address__signup       {   order: 17;
+                                      display: none; }
+      #item-phone__signup         {   order: 18;
+                                      display: none; }
+      #item-email__signup         {   order: 19;
+                                      display: none; }
+
+      #item-gender__signup        {   order: 20;
+                                      display: none; }
+      #item-dob__signup           {   order: 21;
+                                      display: none; }
+      
+
+      // Page 2
+      #item-username__signup      {   order: 20;
+                                      display: none; }
+      #item-password__signup      {   order: 21;
+                                      display: none; }
+      #item-repeat__signup        {   order: 22;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 23;
+                                      display: none; }
+      #item-submit__signup        {   order: 24;
+                                      display: none; }
+
+    }
+
+    /** Collapsed Mobile & Tablet Login */
+    &.mobile-collapsed__login,
+    &.tablet-collapsed__login {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-toggle                {   order: 2; }
+      /** Drop Down **/
+      #item-login__login          {   order: 3; }
+      #item-username__login       {   order: 4; }
+      #item-password__login       {   order: 5; }
+      #item-submit__login         {   order: 6; }
+
+      /** Out Of Site **/
+      #item-login                 {   order: 7;
+                                      display: none; }
+      #item-signup                {   order: 8;  
+                                      display: none; }
+      //* Menu   *
+      #item-menu__menu            {   order: 9;
+                                      display: none; }
+      #item-news__menu            {   order: 10;
+                                      display: none; }
+      #item-about__menu           {   order: 11;
+                                      display: none; }
+      #item-booking__menu         {   order: 12;
+                                      display: none; }
+      #item-contact__menu         {   order: 13;
+                                      display: none; }
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 14;
+                                      display: none; }
+      #item-firstname__signup     {   order: 15;
+                                      display: none; }
+      #item-lastname__signup      {   order: 16;
+                                      display: none; }
+
+      #item-address__signup       {   order: 17;
+                                      display: none; }
+      #item-phone__signup         {   order: 18;
+                                      display: none; }
+      #item-email__signup         {   order: 19;
+                                      display: none; }
+
+      #item-gender__signup        {   order: 20;
+                                      display: none; }
+      #item-dob__signup           {   order: 21;
+                                      display: none; }
+
+                                    
+      // Page 2
+      #item-username__signup      {   order: 22;
+                                      display: none; }
+      #item-password__signup      {   order: 23;
+                                      display: none; }
+      #item-repeat__signup        {   order: 24;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 25;
+                                      display: none; }
+      #item-submit__signup        {   order: 26;
+                                      display: none; }
+
+    }
+
+    /** Collapsed Mobile & Tablet Signup */
+    &.mobile-collapsed__signup,
+    &.tablet-collapsed__signup {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-toggle                {   order: 2; }
+      /** Drop Down **/
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 3; }
+      #item-firstname__signup     {   order: 4; }
+      #item-lastname__signup      {   order: 5; }
+
+      #item-address__signup       {   order: 6; }
+      #item-phone__signup         {   order: 7; }
+      #item-email__signup         {   order: 8; }
+      
+      #item-gender__signup        {   order: 9; }
+      #item-dob__signup           {   order: 10; }
+
+      // Page 2
+      #item-username__signup      {   order: 11; }
+      #item-password__signup      {   order: 12; }
+      #item-repeat__signup        {   order: 13; }
+      #item-subscribe__signup     {   order: 14; }
+      #item-submit__signup        {   order: 15; }
+
+      /** Out Of Site **/
+      // Buttons
+      #item-login                 {   order: 16;
+                                      display: none; }
+      #item-signup                {   order: 17;
+                                      display: none; }
+      // Menu  
+      #item-menu__menu            {   order: 18;
+                                      display: none; }
+      #item-news__menu            {   order: 19;
+                                      display: none; }
+      #item-about__menu           {   order: 20;
+                                      display: none; }
+      #item-booking__menu         {   order: 21;
+                                      display: none; }
+      #item-contact__menu         {   order: 22;
+                                      display: none; }
+      // Login
+      #item-login__login          {   order: 23;
+                                      display: none; }
+      #item-username__login       {   order: 24;
+                                      display: none; }
+      #item-password__login       {   order: 25;
+                                      display: none; }
+      #item-submit__login         {   order: 26;
+                                      display: none; }
+
+    }
+
+    /*** Collapsed Desktop Signup */
+    &.desktop-collapsed__signup {
+
+      /** Header **/
+      #item-logo                  {  order: 1; }
+      #item-toggle                {  order: 2; }
+
+      // Signup
+      // Page 1
+      #item-signup__signup        {  order: 4; }
+      #item-firstname__signup     {  order: 5; }
+      #item-lastname__signup      {  order: 6; }
+
+      #item-address__signup       {  order: 7; }
+      #item-phone__signup         {  order: 8; }
+      #item-email__signup         {  order: 9; }
+
+      #item-gender__signup        {  order: 10; }
+      #item-dob__signup           {  order: 11; }
+
+      // Page 2
+      #item-username__signup      {  order: 12; }
+      #item-password__signup      {  order: 13; }
+      #item-repeat__signup        {  order: 14; }
+      #item-subscribe__signup     {  order: 15; }
+      #item-submit__signup        {  order: 16; }
+
+      /** Out Of Site **/
+      /** Make these disappear **/
+      // Menu
+      #item-menu__menu            {  order: 17; 
+                                    display: none; }
+      #item-news__menu            {  order: 18; 
+                                    display: none; }
+      #item-about__menu           {  order: 19; 
+                                    display: none; }
+      #item-booking__menu         {  order: 20; 
+                                    display: none; }
+      #item-contact__menu         {  order: 21; 
+                                    display: none; }
+
+      // Login
+      #item-login__login           {  order: 22;
+                                      display: none; }
+      #item-username__login        {  order: 23;
+                                      display: none; }
+      #item-password__login        {  order: 24;
+                                      display: none; }
+      #item-submit__login          {  order: 25;
+                                      display: none; }
+
+      // Signup
+      #item-login                  {  order: 26; 
+                                      display: none; }
+      #item-signup                 {  order: 27; 
+                                      display: none; }
+    }
+
+/** Start Sizes For Mobile, Tablet and Desktop */
+
+    /** Uncollapsed Mobile */
+    &.mobile {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-toggle                {   order: 2; }
+
+      /** Drop Down - Out Of Site **/
+      #item-login                 {   order: 3;
+                                      display: none; }
+      #item-signup                {   order: 4;
+                                      display: none; }
+      //* Menu *
+      #item-menu__menu            {   order: 5;
+                                      display: none; }
+      #item-news__menu            {   order: 6;
+                                      display: none; }
+      #item-about__menu           {   order: 7;
+                                      display: none; }
+      #item-booking__menu         {   order: 8;
+                                      display: none; }
+      #item-contact__menu         {   order: 9;
+                                      display: none; }
+      //* Login *
+      #item-login__login          {   order: 10;
+                                      display: none; }
+      #item-username__login       {   order: 11;
+                                      display: none; }
+      #item-password__login       {   order: 12;
+                                      display: none; }
+      #item-submit__login         {   order: 13;
+                                      display: none; }
+      //* Signup *
+      // Page 1
+      #item-signup__signup        {   order: 14;
+                                      display: none; }
+      #item-firstname__signup     {   order: 15;
+                                      display: none; }
+      #item-lastname__signup      {   order: 16;
+                                      display: none; }
+
+      #item-address__signup       {   order: 17;
+                                      display: none; }
+      #item-phone__signup         {   order: 18;
+                                      display: none; }
+      #item-email__signup         {   order: 19;
+                                      display: none; }
+
+      #item-gender__signup        {   order: 20;
+                                      display: none; }
+      #item-dob__signup           {   order: 21;
+                                      display: none; }
+                                    
+      // Page 2
+      #item-username__signup      {   order: 22;
+                                      display: none; }
+      #item-password__signup      {   order: 23;
+                                      display: none; }
+      #item-repeat__signup        {   order: 24;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 25;
+                                      display: none; }
+      #item-submit__signup        {   order: 26;
+                                      display: none; }
+
+    }
+
+    /** Uncollapsed Tablet */
+    &.tablet {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      #item-login                 {   order: 2; }
+      #item-signup                {   order: 3; }
+      #item-toggle                {   order: 4; }
+      
+      /** Drop Down - Out Of Site **/
+      //* Menu */
+      #item-menu__menu            {   order: 5;
+                                      display: none; }
+      #item-news__menu            {   order: 6;
+                                      display: none; }
+      #item-about__menu           {   order: 7;
+                                      display: none; }
+      #item-booking__menu         {   order: 8;
+                                      display: none; }
+      #item-contact__menu         {   order: 9;
+                                      display: none; }
+      //* Login */
+      #item-login__login          {   order: 10;
+                                      display: none; }
+      #item-username__login       {   order: 11;
+                                      display: none; }
+      #item-password__login       {   order: 12;
+                                      display: none; }
+      #item-submit__login         {   order: 13;
+                                      display: none; }
+      //* Signup */
+      // Page 1
+      #item-signup__signup        {   order: 14;
+                                      display: none; }
+      #item-firstname__signup     {   order: 15;
+                                      display: none; }
+      #item-lastname__signup      {   order: 16;
+                                      display: none; }
+
+      #item-address__signup       {   order: 17;
+                                      display: none; }
+      #item-phone__signup         {   order: 18;
+                                      display: none; }
+      #item-email__signup         {   order: 19;
+                                      display: none; }
+      
+      #item-gender__signup        {   order: 20;
+                                      display: none; }
+      #item-dob__signup           {   order: 21;
+                                      display: none; }
+
+      // Page 2
+      #item-username__signup      {   order: 22;
+                                      display: none; }
+      #item-password__signup      {   order: 23;
+                                      display: none; }
+      #item-repeat__signup        {   order: 24;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 25;
+                                      display: none; }
+      #item-submit__signup        {   order: 26;
+                                      display: none; }
+      
+      /** Elements Not In Use **/
+      #item-login__login          {   order: 27;
+                                      display: none;  }
+      #item-signup__signup        {   order: 28;
+                                      display: none;  }
+    }
+
+    /** Uncollapsed Desktop */
+    &.desktop {
+
+      /** Header **/
+      #item-logo                  {   order: 1; }
+      // Menu
+      #item-news__menu            {   order: 2; }
+      #item-about__menu           {   order: 3; }
+      #item-booking__menu         {   order: 4; }
+      #item-contact__menu         {   order: 5; }
+      // Login
+      #item-username__login       {   order: 6; }
+      #item-password__login       {   order: 7; }
+      #item-submit__login         {   order: 8; }
+      // Signup
+      #item-signup                {   order: 9; }
+      
+      /** Drop Down - Out Of Site **/
+      #item-signup__signup        {   order: 10;
+                                      display: none; }
+      #item-firstname__signup     {   order: 11;
+                                      display: none; }
+      #item-lastname__signup      {   order: 12;
+                                      display: none; }
+
+
+      #item-address__signup       {   order: 13;
+                                      display:none; }
+      #item-phone__signup         {   order: 14;
+                                      display: none; }
+      #item-email__signup         {   order: 15;
+                                      display: none; }
+
+      #item-gender__signup        {   order: 16;
+                                      display: none; }
+      #item-dob__signup           {   order: 17;
+                                      display: none; }
+
+
+      #item-username__signup      {   order: 18;
+                                      display: none; }
+      #item-password__signup      {   order: 19;
+                                      display: none; }
+      #item-repeat__signup        {   order: 20;
+                                      display: none; }
+      #item-subscribe__signup     {   order: 21;
+                                      display: none; }
+      #item-submit__signup        {   order: 22;
+                                      display: none; }
+
+      /** Out Of Site **/
+      /** Make these disappear **/
+      #item-toggle                {   order: 23;
+                                      display: none; }
+      #item-login                 {   order: 24;
+                                      display: none; }
+      #item-menu__menu            {   order: 25;
+                                      display: none; }
+      #item-login__login          {   order: 26;
+                                      display: none; }
+
+    }
+
+  }
+
+}
+

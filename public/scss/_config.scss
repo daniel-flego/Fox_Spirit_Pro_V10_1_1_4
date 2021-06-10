@@ -1,0 +1,41 @@
+$purple: #741d51;
+$white: #fff;
+$black: #000;
+$dark-grey: #444;
+$light-grey: #edece8;
+$light-purple: #a30f85;
+
+@mixin mobile-size {
+  @content;
+
+}
+
+@mixin tablet-size {
+  @media screen and (min-width: 600px) { 
+    @content;
+
+    #item-signup {
+      border-bottom: none;
+    }
+
+  }
+}
+
+@mixin desktop-size {
+  
+  @media screen and (min-width: 1000px) {
+    @content;
+
+  }
+
+  @media screen and (min-width: 1190px) {
+    @content;
+
+    #item-username__login,
+    #item-password__login {
+      width: 280px;
+    }
+
+  }
+
+}

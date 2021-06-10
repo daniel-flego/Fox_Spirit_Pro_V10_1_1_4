@@ -1,0 +1,156 @@
+
+#item-gender__signup,
+#item-dob__signup {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  z-index: 98;
+}
+
+#item-gender__signup {
+  padding-right: 6px;
+}
+
+#item-dob__signup {
+  padding-left: 6px;
+}
+
+.section-nav__span {
+  display: block;
+  font-size: 12px;
+  line-height: 200%;
+
+  width: 100%
+}
+
+
+.down {
+  background-color: $light-grey;
+  color: $purple;
+  font-size: 11px;
+  font-family: montserrat;
+  
+  border: none;
+  border-radius: 6px;
+  padding: 6px 13px;
+
+  margin-top: 2px;
+  height: 21px;
+
+  opacity: 0.9;
+
+}
+
+.down:hover {
+  opacity: 1.5;
+  cursor: pointer;
+}
+
+#down-chevron {
+  vertical-align: top;
+}
+
+.gender,
+.dob {
+  height: 39px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  // stretch behind the down button
+  margin-right: -37px;
+
+  //position: relative;
+
+  .section-gender,
+  .section-dob {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    //justify-content: space-between;
+    //align-items: center;
+    //position: absolute;
+    
+    //width: 25.74%;    //levels up flexable width?No
+    //width: auto;
+    //height: auto;
+    max-height: 0px;
+
+    list-style-type: none;
+    text-align: center;
+    background: $light-purple;
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; 
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+
+    z-index: 1000;
+    
+    &__item.signup {
+      //display: block;
+      //padding: 7px 21px;
+      
+      //width: auto;
+      //height: auto;
+
+      //text-align: center;
+
+      //position: absolute;
+      //align-self: stretch;
+
+      //https://www.freecodecamp.org/news/css-positioning-and-flexbox-explained/
+      
+    }
+
+    &__select {
+      color: $white;
+      font-size: 12px;
+
+    }
+
+    &.collapsed__gender {
+      max-height: 127.5px;
+
+      &__gender {
+        //display: block;
+
+      }
+
+    }
+  
+  }
+
+}
+
+.gender.active {
+  max-height: 115px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******** DOB ***********/
+
+#span-month,
+#span-day,
+#span-year {
+  display: none;
+}

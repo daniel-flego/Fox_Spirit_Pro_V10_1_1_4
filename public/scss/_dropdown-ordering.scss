@@ -1,0 +1,28 @@
+
+/** The gender dropdown box order settings **/
+
+nav {
+
+  .section-gender {
+
+    #item-male__gender    { order: 23;  
+                            //display: none;  
+                          }
+    #item-female__gender  { order: 24;  
+                            //display: none;  
+                          }
+    #item-other__gender   { order: 25;  
+                            //display: none;  
+                          }
+
+    &.collapsed__gender {
+
+      #item-male__gender    { order: 23; }
+      #item-female__gender  { order: 24; }
+      #item-other__gender   { order: 25; }
+
+    }
+
+  }
+
+}

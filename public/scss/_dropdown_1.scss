@@ -1,0 +1,166 @@
+
+#item-gender__signup,
+#item-dob__signup,
+#down {
+  display: flex;
+  flex-direction: row;
+}
+
+#dropdown-gender {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-nav__span {
+  display: block;
+  font-size: 12px;
+  line-height: 200%;
+
+  margin-right: -37px;
+}
+
+.down {
+  background-color: $light-grey;
+  color: $purple;
+  font-size: 11px;
+  font-family: montserrat;
+  
+  border: none;
+  border-radius: 6px;
+  padding: 6px 13px;
+
+  margin-top: 2px;
+  height: 21px;
+
+  opacity: 0.9;
+
+}
+
+.down:hover {
+  opacity: 1.5;
+  cursor: pointer;
+}
+
+#down-chevron {
+  vertical-align: top;
+}
+
+/******* Select ******/
+
+.gender {
+  height: 25px;
+
+  .section-gender {
+    display: flex;
+    //flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    height: auto;
+    max-height: 25px;
+
+    list-style-type: none;
+    text-align: center;
+    background: $purple;
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; 
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+
+    &__item.signup {
+      //display: none;
+
+      height: 25px;
+      width: 150px;
+      font-size: 12px;
+      background-color: $purple;
+
+
+    }
+
+    &__select {
+      color: $white;
+
+    }
+
+    &.collapsed__gender {
+      max-height: 75px;
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+/**
+nav {
+
+  .section-gender {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    //align-items: center;
+  
+    height: auto;
+    max-height: 25px;
+
+    //list-style-type: none;
+    //text-align: center;
+    //background: $white;
+    color: $white;
+
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    //flex-direction: row;
+  
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out; 
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+
+    &__item.signup {
+      //2
+      background-color: $purple;
+      color: $white;
+      text-align: center;
+      
+      width: 100%;
+      height: 25px;
+      border: none;
+      //border-radius: 4px;
+
+      // 4
+      //display: inline;
+      //padding: 7px 21px;
+      //width: 100%;
+      //height: auto;
+    }
+
+    &.collapsed__gender {
+      max-height: 75px;
+
+    }
+  
+  }
+
+}
+**/
+
+
+
+
+
+

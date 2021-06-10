@@ -1,0 +1,200 @@
+/** How the elements change at each screen size beyond mobile **/
+
+@include tablet-size {
+
+  #item-logo {
+    max-width: 25%;
+  }
+
+  #item-login {
+    max-width: 25%;
+    text-align: right;
+    margin-left: auto;   
+    
+    padding-right: 5px;
+  }
+
+  #item-signup {
+    max-width: 25%;
+    text-align: left;
+    margin-right: auto;
+
+    padding-left: 5px;
+  }
+
+  #item-toggle {
+    max-width: 25%;
+  }
+
+  #item-subscribe__signup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  
+    #label-yes {
+      width: 260px;
+      margin-left: auto;
+    }
+
+    #input-yes {
+      width: 40px;
+      margin-right: auto;
+    }
+  
+  }
+
+  nav {
+
+    .section-nav {
+
+      &__input {
+        width: 478px;
+      }
+
+      // The menu settings for the tablet size
+      &.tablet-collapsed__menu {
+        max-height: 246px;
+      }
+
+      &.tablet-collapsed__login {
+        max-height: 238px;
+      }
+  
+      &.tablet-collapsed__signup {
+        max-height: 352px;
+      }
+
+    }
+
+  }
+
+}
+
+@include desktop-size {
+
+  #item-logo {
+    width: 75px;
+  }
+
+  #item-menu__menu,
+  #item-login__login {
+    display: none;
+  }
+
+  #item-username__login {
+    margin-left: auto;
+  }
+
+  #item-username__login,
+  #item-password__login {
+    text-align: right;
+    padding: 0px;
+
+    flex: 1 0 190px;
+    max-width: 280px; 
+  }
+
+  #item-submit__login {
+    padding-left: 0px;
+    width: max-content;
+  }
+
+  #button-submit__login {
+    font-size: 16px;
+    width: max-content;
+    padding: 2px 12px;
+  }
+
+  #button-submit__login:hover {
+    background-color: #ddd;
+    color: $purple;
+    opacity: 0.5;
+  }
+
+  /*
+  #item-signup {
+    width: max-content;
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+  */
+
+  #item-signup {
+    width: max-content;
+    text-align: right;
+    margin-right: 0px;
+    padding-right: 0px;
+
+    &.active {
+      
+      margin-left: auto;
+
+      padding-left: 12.125px;
+      padding-right: 7.125px;
+
+      /** Continue From Here **/
+      // Google - changing innerhtml using css
+      // https://css-tricks.com/swapping-out-text-five-different-ways/
+
+    }
+
+  }
+
+  nav {
+    .section-nav {
+
+      &__item.menu {
+        width: max-content;
+        padding: 0px;
+        text-align: left;
+        margin-right: 15px;
+      }
+
+      &__item.login {
+        width: max-content;
+        text-align: right;
+        padding-right: 0px;
+        margin-left: 15px;
+      }
+
+      &__input {
+        width: 55%;
+      }
+      
+      input[name = "username"],
+      input[name = "pwd"] {
+        width: 100%;
+      }
+
+      #item-toggle {
+        margin-top: 10px;
+        padding-right: 28px;
+      }
+
+      #item-logo {
+        margin-top: 1px;
+      }
+
+      &.desktop-collapsed__signup {
+        max-height: 352px;
+        //max-height: 200px;
+      }
+
+    }
+  }
+
+}
+
+
+/** 
+    Using Flexbox to adjust textbox length example
+      https://www.w3.org/WAI/WCAG21/Techniques/css/C38.html
+
+    Might come in handy
+      https://www.toptal.com/sass/css3-flexbox-sass-grid-tutorial
+      https://sass-lang.com/documentation/at-rules/mixin
+      
+**/
