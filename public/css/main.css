@@ -2609,7 +2609,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 }
 
 .section-nav__span {
-  display: block;
   font-size: 12px;
   line-height: 200%;
   width: 100%;
@@ -2652,8 +2651,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2672,6 +2669,21 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   z-index: 1000;
 }
 
+.gender .section-gender__item.signup,
+.gender .section-dob__item.signup,
+.dob .section-gender__item.signup,
+.dob .section-dob__item.signup {
+  padding: 3px 10px;
+}
+
+.gender .section-gender__item.signup:hover,
+.gender .section-dob__item.signup:hover,
+.dob .section-gender__item.signup:hover,
+.dob .section-dob__item.signup:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .gender .section-gender__select,
 .gender .section-dob__select,
 .dob .section-gender__select,
@@ -2685,6 +2697,12 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .dob .section-gender.collapsed__gender,
 .dob .section-dob.collapsed__gender {
   max-height: 127.5px;
+  /**
+      &__gender {
+        //display: block;
+
+      }
+      **/
 }
 
 .gender.active {

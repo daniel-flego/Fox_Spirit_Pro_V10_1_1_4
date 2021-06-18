@@ -16,7 +16,7 @@
 }
 
 .section-nav__span {
-  display: block;
+  //display: block;
   font-size: 12px;
   line-height: 200%;
 
@@ -55,16 +55,12 @@
   height: 39px;
   padding-left: 20px;
   padding-right: 20px;
-
-  // stretch behind the down button
-  margin-right: -37px;
-
-  //position: relative;
+  margin-right: -37px;      // stretch behind the down button
 
   .section-gender,
   .section-dob {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
     flex-direction: column;
     //justify-content: space-between;
     //align-items: center;
@@ -92,7 +88,7 @@
     
     &__item.signup {
       //display: block;
-      //padding: 7px 21px;
+      padding: 3px 10px;
       
       //width: auto;
       //height: auto;
@@ -106,6 +102,11 @@
       
     }
 
+    &__item.signup:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }    
+
     &__select {
       color: $white;
       font-size: 12px;
@@ -115,10 +116,12 @@
     &.collapsed__gender {
       max-height: 127.5px;
 
+      /**
       &__gender {
         //display: block;
 
       }
+      **/
 
     }
   
@@ -129,6 +132,7 @@
 .gender.active {
   max-height: 115px;
 }
+
 
 
 
