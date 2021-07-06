@@ -63,7 +63,7 @@ function setUncollapseArray() {
 
   // This must happen after 'active' is set !!!
   uncollapseArray = elementsArray.filter(currentNotDisplay);
-
+  
 }
 
 function setSignupPages() {

@@ -46,6 +46,16 @@
 }
 
 .section-nav {
+  //list element container
+  &__item.menu,
+  &__item.login,
+  &__item.signup,
+  &__item.button {
+    display: block;
+    padding: 7px 21px;
+    width: 100%;
+    height: auto;
+  }
 
   &__img {
     max-height: 100%;
@@ -89,15 +99,7 @@
     border-radius: 4px;
   }
 
-  &__item.menu,
-  &__item.login,
-  &__item.signup,
-  &__item.button {
-    display: block;
-    padding: 7px 21px;
-    width: 100%;
-    height: auto;
-  }
+
 
 }
 

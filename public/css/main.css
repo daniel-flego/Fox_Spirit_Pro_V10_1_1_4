@@ -31,14 +31,14 @@ nav .section-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: auto;
-  max-height: 60px;
+  overflow: hidden;
   list-style-type: none;
   text-align: center;
   background: #fff;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  overflow: hidden;
+  height: auto;
+  max-height: 60px;
   transition: max-height 0.5s ease-in-out;
   -webkit-transition: max-height 0.5s ease-in-out;
   -moz-transition: max-height 0.5s ease-in-out;
@@ -101,6 +101,13 @@ nav .section-nav.mobile-collapsed__signup {
   cursor: pointer;
 }
 
+.section-nav__item.menu, .section-nav__item.login, .section-nav__item.signup, .section-nav__item.button {
+  display: block;
+  padding: 7px 21px;
+  width: 100%;
+  height: auto;
+}
+
 .section-nav__img {
   max-height: 100%;
   max-width: 100%;
@@ -137,13 +144,6 @@ nav .section-nav.mobile-collapsed__signup {
   height: 25px;
   border: none;
   border-radius: 4px;
-}
-
-.section-nav__item.menu, .section-nav__item.login, .section-nav__item.signup, .section-nav__item.button {
-  display: block;
-  padding: 7px 21px;
-  width: 100%;
-  height: auto;
 }
 
 /** 
@@ -2666,7 +2666,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   -webkit-transition: max-height 0.5s ease-in-out;
   -moz-transition: max-height 0.5s ease-in-out;
   -o-transition: max-height 0.5s ease-in-out;
-  z-index: 1000;
 }
 
 .gender .section-gender__item.signup,
@@ -2697,18 +2696,20 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 .dob .section-gender.collapsed__gender,
 .dob .section-dob.collapsed__gender {
   max-height: 127.5px;
-  /**
-      &__gender {
-        //display: block;
-
-      }
-      **/
 }
 
-.gender.active {
+.gender.active,
+.dob.active {
   max-height: 115px;
 }
 
+/**
+  Git Tutorial
+  https://www.youtube.com/watch?v=SWYqp7iY_Tc&t=1169s
+  Instructions are on the github site for merging to it
+
+  //https://www.freecodecamp.org/news/css-positioning-and-flexbox-explained/
+**/
 /******** DOB ***********/
 #span-month,
 #span-day,

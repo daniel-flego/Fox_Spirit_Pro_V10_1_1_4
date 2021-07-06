@@ -146,13 +146,13 @@
               Female
             </a>
           </li>
-          <!--
+          
           <li class="section-gender__item signup" id="item-other__gender">
             <a class="section-gender__select" id="select-gender__other" name="other" href="#">
               Other
             </a>
           </li>
-          -->
+          
 
         </ul>
 
