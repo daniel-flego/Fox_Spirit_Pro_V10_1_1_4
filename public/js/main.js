@@ -264,12 +264,13 @@ signupButton.addEventListener('click', function() {
   if (compareUncollapsedList($(".section-nav"))) {
     currentCollapsed = setCollapsedState(currentWindow, currentButton);
 
-    console.log(currentCollapsed);
+    //console.log(currentCollapsed);
 
     if (currentWindow.includes('mobile')) {
       openMainMenu('yes', currentWindow, currentCollapsed);                           // Open main menu
     }
     else {
+      //alert("YES!!3");
       openSignupPageOne('yes', currentWindow, currentCollapsed);                      // Open the signup menu
     }
     

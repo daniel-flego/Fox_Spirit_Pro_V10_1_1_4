@@ -98,6 +98,8 @@ function setMenuToggle() {
 function toggleLoginInfo(value) {
   let state = value;
 
+  console.log(value);
+
   if (state === 'none') {
     $(".info").toggle();
     
@@ -107,6 +109,12 @@ function toggleLoginInfo(value) {
     }, 500);
 
   }
+  /*
+  else if (state === 'collapsed') {
+    //alert("YES!!");
+    $(".info").toggle();
+  }
+  */
   else {
     // clear the collapsed section
     $(".info").toggle(1000);

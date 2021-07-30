@@ -197,11 +197,15 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
-  
+  //alert("YES!!");
+
   // remove the login info status
   if (loginInfo === 'yes') {
-    toggleLoginInfo('collapsed');          
+    //alert("YES!!3");
+    toggleLoginInfo('none');         
   }
+
+  //toggleLoginInfo(loginInfo); 
   
   // remove current section state from the section-nav parent class name
   document.querySelector('.section-nav').classList.remove(sectionState);
