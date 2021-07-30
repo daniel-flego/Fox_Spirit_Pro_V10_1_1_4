@@ -19,6 +19,8 @@ main {
   background-color: $white;
 
   margin: 20px;
+  
+  max-width: 150px;
 }
 
 .login-status {
@@ -26,6 +28,8 @@ main {
   font-size: 10px;
   animation: fadeIn 0s 1s forwards;
   visibility: hidden;
+
+  max-width: 140px;
 
 }
 

@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet"');
 
 @import '_config';
-@import '_menu';
+@import '_dropdown';
+@import '_dropdown-ordering';
+@import '_login';
 @import '_menu-elements';
 @import '_menu-ordering';
 @import '_menu-responsive';
-@import '_login';
-@import '_utilities';
-@import '_dropdown';
-
-@import '_dropdown-ordering';
+@import '_menu';
 @import '_page';
+@import '_utilities';
 
 * {
   box-sizing: border-box;

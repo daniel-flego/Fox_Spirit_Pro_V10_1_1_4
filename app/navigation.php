@@ -225,7 +225,10 @@
         Subscribe to our newsletter?
       </label>
 
-      <input class="section-nav__input" id="input-yes" name="subscribe-yes__signup" type="checkbox" value="yes">
+      <!--
+      <input class="section-nav__input" id="input-yes" name="subscribe-yes__signup" type="checkbox" value="no" checked="false">
+      -->
+      <input class="section-nav__input" id="checkbox-subscribe" name="subscribe__signup" type="checkbox">
 
     </li>
 

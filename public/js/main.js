@@ -6,15 +6,19 @@ const signupButton = document.getElementById('item-signup');
 const nextButton = document.getElementById('controls-right');
 const prevButton = document.getElementById('controls-left');
 
+const checkSubscription = document.getElementById('checkbox-subscribe');
+
 let currentWindow = 'Error';        // Current window size 
 let currentCollapsed = 'None';      // Current section state  
 let currentButton = 'None'
+
+let checked = 'false';
 
 /** Menu Toggle Button - All The Processes When The Menu Button Is Pressed */
 menuToggleButton.addEventListener('click', function() {
   let currentWindow = checkWindowSize();                // Get current window size
   let currentButton = menuToggleButton.id;              // Assign button id to variable
-
+  
   // Check if main menu has collapsed
   if (compareUncollapsedList($(".section-nav"))) {
     currentCollapsed = setCollapsedState(currentWindow, currentButton);
@@ -28,17 +32,45 @@ menuToggleButton.addEventListener('click', function() {
 
       /** Mobile */
       if (currentCollapsed.includes('mobile')) {
-
+        
         if (currentCollapsed.includes('collapsed__menu')) {   
           closeMainMenu('yes', currentWindow, currentCollapsed);              // Close main menu
         }
         else if (currentCollapsed.includes('collapsed__login') ||
-                (currentCollapsed.includes('collapsed__signup'))) {   
+                (currentCollapsed.includes('collapsed__signup'))) {
+          
+          // Retract the gender dropdown if it's still active
+          if ($('.section-gender').hasClass('collapsed__gender')) {
 
+            changeDropdownButton('up');      // Change the button icon
+            changeDropdownState('up');       // Open/Close the dropdown menu
+
+            setTimeout(function() {
+              closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
+
+              setTimeout(function() {
+                openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
+  
+                document.getElementById('span-gender').innerHTML = 'Gender';
+
+              }, 600);
+
+            }, 500);
+
+            return;
+          }
+          //alert("YES!! 1");
           closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
+
           setTimeout(function() {
+            // Reset subscription checkbox
+            subUnchecked();
+            //document.getElementById('checkbox-subscribe').checked = false;    
             openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
-          }, 500);   
+
+            document.getElementById('span-gender').innerHTML = 'Gender';
+          }, 500);
+
         }
         /** Mobile Error */
         else {
@@ -54,9 +86,36 @@ menuToggleButton.addEventListener('click', function() {
         }
         else if (currentCollapsed.includes('collapsed__login') ||
                 (currentCollapsed.includes('collapsed__signup'))) {
+          
+          // Retract gender dropdown if it's atill active
+          if ($('.section-gender').hasClass('collapsed__gender')) {
+            //alert("YES!!");
+
+            changeDropdownButton('up');      // Change the button icon
+            changeDropdownState('up');       // Open/Close the dropdown menu
+
+            setTimeout(function() {
+              closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
+
+              setTimeout(function() {
+                openMainMenu('no', currentWindow, 'tablet-collapsed__menu');      // Open the main menu
+  
+                document.getElementById('span-gender').innerHTML = 'Gender';
+
+              }, 600);
+
+            }, 500);
+
+            return;
+
+          }
+          
           closeLoginMenu('yes', currentWindow, currentCollapsed);             // Close the login menu
 
           setTimeout(function() {
+            // Reset subscription checkbox
+            subUnchecked();
+
             document.querySelector('.section-nav').classList.add(currentWindow);
     
           }, 500);
@@ -69,12 +128,41 @@ menuToggleButton.addEventListener('click', function() {
       }
       /** Desktop */
       else if (currentCollapsed.includes('desktop')) {
+        
+        // Retract the gender dropdown if it's still 'active'
+        if ($('.section-gender').hasClass('collapsed__gender')) {
+          
+          changeDropdownButton('up');      // Change the button icon
+          changeDropdownState('up');       // Open/Close the dropdown menu
+
+          setTimeout(function() {
+            //closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login/signup menu
+            closeSignupMenu('yes', currentWindow, currentCollapsed);              // Close login/signup menu
+
+            setTimeout(function() {
+              //openMainMenu('no', currentWindow, 'desktop-collapsed__menu');      // Open the main menu
+
+              document.querySelector('.section-nav').classList.add(currentWindow);
+              document.getElementById('span-gender').innerHTML = 'Gender';
+
+            }, 600);
+
+          }, 500);
+
+          return;
+        }
+
         closeSignupMenu('yes', currentWindow, currentCollapsed);              // Close signup menu
 
         setTimeout(function() {      
+          // Reset subscription checkbox
+          subUnchecked();
           document.querySelector('.section-nav').classList.add(currentWindow);
   
         }, 500);
+
+        // if gender dropdown is 'active'
+
       }
       /** Desktop Error */
       else {
@@ -247,6 +335,26 @@ signupButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
   let currentWindow = checkWindowSize();               // Get current window size
   let currentCollapsed = checkCollapsedState();        // Get current section state
+  //alert("YES$%");
+
+  // Retract the gender dropdown if it's still active
+  if ($('.section-gender').hasClass('collapsed__gender')) {
+
+    changeDropdownButton('up');      // Change the button icon
+    changeDropdownState('up');       // Open/Close the dropdown menu
+
+    setTimeout(function() {
+      closeSignupMenu('no', currentWindow, currentCollapsed);     // Close signuo menu
+
+      setTimeout(function() {
+        openSignupPageTwo('no', currentWindow, currentCollapsed);     // Open signup page 2
+
+      }, 600);
+
+    }, 500);
+
+    return;
+  }
 
   closeSignupMenu('no', currentWindow, currentCollapsed);     // Close signuo menu
 
@@ -267,6 +375,22 @@ prevButton.addEventListener('click', function() {
     openSignupPageOne('no', currentWindow, currentCollapsed);     // Open signup page 1
   
   }, 500);
+
+});
+
+checkSubscription.addEventListener('click', function() {
+  //alert("YES!!");
+  
+  if (checked == 'true') {
+    checked = 'false';
+    subUnchecked();
+    return;
+
+  }
+
+  checked = 'true';
+  subChecked();
+  return;
 
 });
 
@@ -439,3 +563,12 @@ function resizeCollapsedSignup() {
   }
 
 }
+
+
+
+
+/**
+ *** Debugging Tutorial ***
+  https://www.youtube.com/watch?v=AX7uybwukkk
+  11:40 - VS Code
+  */

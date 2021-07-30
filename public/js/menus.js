@@ -13,13 +13,14 @@ function openMainMenu(loginInfoValue, sectionStateValue, extensionValue) {
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
+  //console.log(currentToggle);
 
   // toggle the login info status - remove
   if (loginInfo === 'yes') {
     toggleLoginInfo('none');
 
   }
-
+  
   // remove current section state from the section-nav parent class name
   document.querySelector('.section-nav').classList.remove(sectionState);
 
@@ -77,13 +78,14 @@ function closeMainMenu(loginInfoValue, sectionStateValue, extensionValue) {
 
 }
 
+// Opens both login and signup pages
 function openLoginMenu(loginInfoValue, sectionStateValue, extensionValue) {
   let loginInfo = loginInfoValue;
   let sectionState = sectionStateValue;
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
-
+  
   // remove the login info status
   if (loginInfo === 'yes') {
     toggleLoginInfo('collapsed');          
@@ -105,12 +107,15 @@ function openLoginMenu(loginInfoValue, sectionStateValue, extensionValue) {
 
 }
 
+// Closes both login and signup pages
 function closeLoginMenu(loginInfoValue, sectionStateValue, extensionValue) {
   let loginInfo = loginInfoValue;
   let sectionState = sectionStateValue;
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
+  
+  //alert('YES$%');
 
   // remove the login info status
   if (loginInfo === 'yes') {
@@ -152,7 +157,7 @@ function closeSignupMenu(loginInfoValue, sectionStateValue, extensionValue) {
   if (loginInfo === 'yes') {
     toggleLoginInfo('collapsed');          
   }
-
+//alert("YES");
   // remove the menu extension to section-nav parent
   document.querySelector('.section-nav').classList.remove(extension);
 
@@ -183,7 +188,7 @@ function closeSignupMenu(loginInfoValue, sectionStateValue, extensionValue) {
 
     }
 
-  }, 500)
+  }, 500);
 }
 
 function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
@@ -192,12 +197,12 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
-
+  
   // remove the login info status
   if (loginInfo === 'yes') {
     toggleLoginInfo('collapsed');          
   }
-
+  
   // remove current section state from the section-nav parent class name
   document.querySelector('.section-nav').classList.remove(sectionState);
 
@@ -210,6 +215,7 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
 
   // Set up an array for the gender dropdown and   it's list elements
   //console.log(genderSetup);
+  genderSetup.forEach(hideVisibility);
   genderSetup.forEach(removeActive);
 
   signupPageOne.forEach(unhideVisibility);

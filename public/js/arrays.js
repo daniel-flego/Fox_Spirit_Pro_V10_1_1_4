@@ -80,7 +80,7 @@ function setSignupPages() {
     }
 
     // Make the dropdown arrays
-    if ((elementsList[i].className.includes('gender'))) {
+    if ((elementsList[i].className.includes('section-gender'))) {
       genderArray.push(elementsList[i]);
     }
 

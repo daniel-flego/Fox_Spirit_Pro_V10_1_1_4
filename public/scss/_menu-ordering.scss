@@ -84,15 +84,19 @@
       #item-signup__signup        {   order: 14; }
       #item-firstname__signup     {   order: 15; }
       #item-lastname__signup      {   order: 16; }
-      #item-email__signup         {   order: 17; }
-      #item-address__signup       {   order: 18; }
-      #item-phone__signup         {   order: 19; }
+      
+      #item-address__signup       {   order: 17; }
+      #item-phone__signup         {   order: 18; }
+      #item-email__signup         {   order: 19; }
+      #item-gender__signup        {   order: 20; }
+      #item-dob__signup           {   order: 21; }
+
       // Page 2
-      #item-username__signup      {   order: 20; }
-      #item-password__signup      {   order: 21; }
-      #item-repeat__signup        {   order: 22; }
-      #item-subscribe__signup     {   order: 23; }
-      #item-submit__signup        {   order: 24; }
+      #item-username__signup      {   order: 22; }
+      #item-password__signup      {   order: 23; }
+      #item-repeat__signup        {   order: 24; }
+      #item-subscribe__signup     {   order: 25; }
+      #item-submit__signup        {   order: 26; }
       
       /** Elements Not In Use **/
       //#item-login__login          {   order: 25;  }
@@ -124,15 +128,18 @@
       #item-signup__signup        {   order: 10; }
       #item-firstname__signup     {   order: 11; }
       #item-lastname__signup      {   order: 12; }
-      #item-email__signup         {   order: 13; }
-      #item-address__signup       {   order: 14; }
-      #item-phone__signup         {   order: 15; }
+      #item-address__signup       {   order: 13; }
+      #item-phone__signup         {   order: 14; }
+      #item-email__signup         {   order: 15; }
 
-      #item-username__signup      {   order: 16; }
-      #item-password__signup      {   order: 17; }
-      #item-repeat__signup        {   order: 18; }
-      #item-subscribe__signup     {   order: 19; }
-      #item-submit__signup        {   order: 20; }
+      #item-gender__signup        {   order: 16; }
+      #item-dob                   {   order: 17; }
+
+      #item-username__signup      {   order: 18; }
+      #item-password__signup      {   order: 19; }
+      #item-repeat__signup        {   order: 20; }
+      #item-subscribe__signup     {   order: 21; }
+      #item-submit__signup        {   order: 22; }
 
       /** Out Of Site **/
       /** Make these disappear **/

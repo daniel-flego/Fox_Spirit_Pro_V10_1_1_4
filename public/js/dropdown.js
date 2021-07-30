@@ -86,6 +86,7 @@ function changeDropdownState(buttonValue) {
 
     // add the menu extension to section-nav parent
     document.querySelector('.section-gender').classList.add('collapsed__gender');
+    genderSetup.forEach(unhideVisibility);
     genderSetup.forEach(addActive);
     document.querySelector('.gender').classList.add('active');
     return;
@@ -96,6 +97,13 @@ function changeDropdownState(buttonValue) {
   document.querySelector('.section-gender').classList.remove('collapsed__gender');
   genderSetup.forEach(removeActive);
   document.querySelector('.gender').classList.remove('active');
-  return;
+
+  setTimeout(function() {
+
+    genderSetup.forEach(hideVisibility);
+    return;
+
+  }, 500);
 
 }
+

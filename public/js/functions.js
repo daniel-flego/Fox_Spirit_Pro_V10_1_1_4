@@ -261,3 +261,19 @@ function collapsedResizeProcedure(removeValue, addValue) {
   document.querySelector('.section-nav').classList.add(add);
 
 }
+
+function resetGender() {
+  document.querySelector('.section-nav__span').innerHTML = 'Gender';
+
+}
+
+function subChecked() {
+  document.getElementById('checkbox-subscribe').checked = true;
+
+}
+
+function subUnchecked() {
+  //alert('HERE!!');
+  document.getElementById('checkbox-subscribe').checked = false;
+
+}

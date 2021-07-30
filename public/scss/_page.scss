@@ -19,11 +19,11 @@
   position: relative;
 
   .hero-content {
-
-    text-align: center;
     position: absolute;
-
+    text-align: center;
+    
     margin-top: 70px;
+    width: 100%;
     
     h1 {
       color: $white;

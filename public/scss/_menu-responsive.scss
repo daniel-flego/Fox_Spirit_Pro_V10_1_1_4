@@ -26,21 +26,33 @@
     max-width: 25%;
   }
 
+  #item-gender__signup {
+    width: 260px;
+
+    max-width: 50%;
+    margin-left: auto;
+
+  }
+
+  #item-dob__signup {
+    width: 260px;
+
+    max-width: 50%;
+    margin-right: auto;
+  }
+
   #item-subscribe__signup {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
   
     #label-yes {
       width: 260px;
-      margin-left: auto;
     }
 
-    #input-yes {
-      width: 40px;
-      margin-right: auto;
+    #checkbox-subscribe {
+      width: 20px;
     }
   
   }
@@ -55,7 +67,7 @@
 
       // The menu settings for the tablet size
       &.tablet-collapsed__menu {
-        max-height: 246px;
+        max-height: 256px;
       }
 
       &.tablet-collapsed__login {
@@ -63,9 +75,20 @@
       }
   
       &.tablet-collapsed__signup {
-        max-height: 352px;
+        max-height: 395px;
       }
 
+    }
+
+  }
+
+  /** Login Status **/
+
+  .section-info {
+    width: 170px;
+
+    .login-status {
+      width: 140px;
     }
 
   }
@@ -113,15 +136,6 @@
     opacity: 0.5;
   }
 
-  /*
-  #item-signup {
-    width: max-content;
-    text-align: right;
-    margin-right: 0px;
-    padding-right: 0px;
-  }
-  */
-
   #item-signup {
     width: max-content;
     text-align: right;
@@ -129,7 +143,6 @@
     padding-right: 0px;
 
     &.active {
-      
       margin-left: auto;
 
       padding-left: 12.125px;
@@ -142,6 +155,30 @@
     }
 
   }
+
+  #item-gender__signup {
+    width: 100%;
+  }
+
+  #item-dob__signup {
+    width: 100%;
+  }
+
+  .section-nav {
+
+    .gender {
+      width: 55%;
+      margin-left: auto;
+
+    }
+
+    .dob {
+      width: 55%;
+
+    }
+  
+  }
+
 
   nav {
     .section-nav {
@@ -179,8 +216,7 @@
       }
 
       &.desktop-collapsed__signup {
-        max-height: 352px;
-        //max-height: 200px;
+        max-height: 395px;
       }
 
     }

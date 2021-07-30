@@ -9,9 +9,9 @@
       "request": "launch",
       "type": "pwa-chrome",
       //"url": "http://localhost:8080",
-      "url": "http://localhost/Fox_Spirit_Pro_V10_2/app",
+      "url": "http://localhost/Fox_Spirit_Pro_V10_1_1_4/app",
       //"url": "http://localhost",
-      "webRoot": "${workspaceFolder}/public"
+      "webRoot": "${workspaceFolder}/public/js"
     },
     {
       "name": "Listen for XDebug",
