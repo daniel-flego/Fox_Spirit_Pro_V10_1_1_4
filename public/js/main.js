@@ -63,12 +63,12 @@ menuToggleButton.addEventListener('click', function() {
           closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
 
           setTimeout(function() {
-            // Reset subscription checkbox
+            // Reset subscription checkbox and gender
             subUnchecked();
+            resetGender();
             //document.getElementById('checkbox-subscribe').checked = false;    
             openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
 
-            document.getElementById('span-gender').innerHTML = 'Gender';
           }, 500);
 
         }
@@ -98,9 +98,11 @@ menuToggleButton.addEventListener('click', function() {
               closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
 
               setTimeout(function() {
+                // Reset subscription checkbox and gender
+                subUnchecked();
+                resetGender();
+
                 openMainMenu('no', currentWindow, 'tablet-collapsed__menu');      // Open the main menu
-  
-                document.getElementById('span-gender').innerHTML = 'Gender';
 
               }, 600);
 
@@ -113,12 +115,14 @@ menuToggleButton.addEventListener('click', function() {
           closeLoginMenu('yes', currentWindow, currentCollapsed);             // Close the login menu
 
           setTimeout(function() {
-            // Reset subscription checkbox
+            // Reset subscription checkbox and gender
             subUnchecked();
+            resetGender();
 
             document.querySelector('.section-nav').classList.add(currentWindow);
     
           }, 500);
+
         }
         /** Tablet Error */
         else {
@@ -142,8 +146,13 @@ menuToggleButton.addEventListener('click', function() {
             setTimeout(function() {
               //openMainMenu('no', currentWindow, 'desktop-collapsed__menu');      // Open the main menu
 
+              // Reset subscription checkbox and gender
+              subUnchecked();
+              resetGender();
+
               document.querySelector('.section-nav').classList.add(currentWindow);
-              document.getElementById('span-gender').innerHTML = 'Gender';
+              
+              //document.getElementById('span-gender').innerHTML = 'Gender'; 
 
             }, 600);
 
@@ -155,8 +164,10 @@ menuToggleButton.addEventListener('click', function() {
         closeSignupMenu('yes', currentWindow, currentCollapsed);              // Close signup menu
 
         setTimeout(function() {      
-          // Reset subscription checkbox
+          // Reset subscription checkbox and gender
           subUnchecked();
+          resetGender();
+          
           document.querySelector('.section-nav').classList.add(currentWindow);
   
         }, 500);
