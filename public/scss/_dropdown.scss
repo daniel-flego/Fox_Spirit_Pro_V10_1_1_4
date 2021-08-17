@@ -82,11 +82,6 @@
       padding: 3px 10px;
     }
 
-    &__item.signup:hover {
-      opacity: 0.5;
-      cursor: pointer;
-    }    
-
     &__select {
       color: $white;
       font-size: 12px;
@@ -95,14 +90,40 @@
     &.collapsed__gender {
       max-height: 127.5px;
     }
+
+    &.collapsed__dob {
+      max-height: 220px;
+      //margin-left: -120px;
+    }
   
   }
 
+  .section-gender {
+
+    &__item.signup:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }    
+
+  }
+
+  // For the individual selections in gender only
   &.active {
     max-height: 115px;
   }
 
 }
+
+.dob {
+
+  .section-dob {
+
+    margin-left: -130px;
+
+  }
+
+}
+
 
 
 
@@ -146,10 +167,116 @@
 
 
 
-/******** DOB ***********/
+/******** DOB - Calendar **********/
 
-#span-month,
-#span-day,
-#span-year {
-  display: none;
+$color-one-light: #8392a7;
+$color-one-dark: #68768a;
+$color-white: #fff;
+
+/*
+.ui-datepicker-inline {
+  background-color: red;
+
+  position: relative;
+  width: 100%;
 }
+*/ 
+
+.ui-datepicker-header {
+  height: 50%;
+  line-height: 25px;
+  //background: $color-one-light;
+  //color: $color-white;
+  margin-bottom: 10px;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  width: 20px;
+  height: 20px;
+  text-indent: 9999px;
+  border: 2px solid $color-white;
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  margin-left: 12px;
+
+  &:after {
+    transform: rotate(45deg);
+    margin: -20px 0px 0px 6px;
+  }
+}
+
+.ui-datepicker-next {
+  float: right;
+  margin-right: 12px;
+
+  &:after {
+    transform: rotate(-135deg);
+    margin: -20px 0px 0px 4px;
+
+  }
+}
+
+.ui-datepicker-prev, .ui-datepicker-next  {
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-left: 2px solid $color-white;
+    border-bottom: 2px solid $color-white;
+
+  }
+}
+
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover, 
+.ui-datepicker-prev:hover:after, 
+.ui-datepicker-next:hover:after {
+  border-color: $color-one-dark;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+
+  padding-top: 5px;
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+
+  thead {
+
+    tr {
+      th {
+        span {
+          display: block;
+          width: 100%;
+          color: $color-one-light;
+          margin-bottom: 5px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+}
+
+/*
+.ui-datepicker-other-month:hover {
+
+  opacity: 1.5;
+  cursor: pointer;
+
+}
+*/ 
+
+
+
+

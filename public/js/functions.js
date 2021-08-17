@@ -98,7 +98,7 @@ function setMenuToggle() {
 function toggleLoginInfo(value) {
   let state = value;
 
-  console.log(value);
+  //console.log(value);
 
   if (state === 'none') {
     $(".info").toggle();

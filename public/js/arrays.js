@@ -19,6 +19,7 @@ let genderArray = [];
 let genderSetup = [];
 
 let dobArray = [];
+let dobSetup = [];
 
 /** FUNCTIONS */
 
@@ -70,7 +71,9 @@ function setSignupPages() {
   let elementsList = $('.section-nav').find('li');
   let elementsArray = [];
   let genderArray = [];
+  let dobArray = [];
 
+  // Make genderArray
   for (var i=0; i < elementsList.length; i++) {
     
     // Gender is the dropdown box
@@ -86,10 +89,16 @@ function setSignupPages() {
 
   }
 
+  // Setup dobArray
+  //console.log(document.getElementById('item__dob'));
+  dobArray.push(document.getElementById('item__dob'));
+
   //console.log(elementsList);
-  //console.log(genderArray);
+  console.log(genderArray);
+  console.log(dobArray);
 
   genderSetup = genderArray;
+  dobSetup = dobArray;
 
   signupPageOne = elementsArray.filter(pageOneSetup);
   signupPageTwo = elementsArray.filter(pageTwoSetup);

@@ -217,10 +217,13 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
   signupPageTwo.forEach(hideVisibility);
   signupPageTwo.forEach(removeActive);
 
-  // Set up an array for the gender dropdown and   it's list elements
+  // Set up an array for the gender and dob dropdown and  it's list elements
   //console.log(genderSetup);
   genderSetup.forEach(hideVisibility);
   genderSetup.forEach(removeActive);
+
+  dobSetup.forEach(hideVisibility);
+  dobSetup.forEach(removeActive);
 
   signupPageOne.forEach(unhideVisibility);
   signupPageOne.forEach(addActive);

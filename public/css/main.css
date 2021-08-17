@@ -87,14 +87,6 @@
   padding: 3px 10px;
 }
 
-.gender .section-gender__item.signup:hover,
-.gender .section-dob__item.signup:hover,
-.dob .section-gender__item.signup:hover,
-.dob .section-dob__item.signup:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
 .gender .section-gender__select,
 .gender .section-dob__select,
 .dob .section-gender__select,
@@ -110,9 +102,26 @@
   max-height: 127.5px;
 }
 
+.gender .section-gender.collapsed__dob,
+.gender .section-dob.collapsed__dob,
+.dob .section-gender.collapsed__dob,
+.dob .section-dob.collapsed__dob {
+  max-height: 220px;
+}
+
+.gender .section-gender__item.signup:hover,
+.dob .section-gender__item.signup:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .gender.active,
 .dob.active {
   max-height: 115px;
+}
+
+.dob .section-dob {
+  margin-left: -130px;
 }
 
 /**
@@ -132,13 +141,96 @@
   max-width: 25%;
 }
 
-/******** DOB ***********/
-#span-month,
-#span-day,
-#span-year {
-  display: none;
+/******** DOB - Calendar **********/
+/*
+.ui-datepicker-inline {
+  background-color: red;
+
+  position: relative;
+  width: 100%;
+}
+*/
+.ui-datepicker-header {
+  height: 50%;
+  line-height: 25px;
+  margin-bottom: 10px;
 }
 
+.ui-datepicker-prev, .ui-datepicker-next {
+  width: 20px;
+  height: 20px;
+  text-indent: 9999px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  margin-left: 12px;
+}
+
+.ui-datepicker-prev:after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: -20px 0px 0px 6px;
+}
+
+.ui-datepicker-next {
+  float: right;
+  margin-right: 12px;
+}
+
+.ui-datepicker-next:after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  margin: -20px 0px 0px 4px;
+}
+
+.ui-datepicker-prev:after, .ui-datepicker-next:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.ui-datepicker-prev:hover, .ui-datepicker-next:hover,
+.ui-datepicker-prev:hover:after,
+.ui-datepicker-next:hover:after {
+  border-color: #68768a;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+  padding-top: 5px;
+}
+
+.ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+
+.ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  color: #8392a7;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+/*
+.ui-datepicker-other-month:hover {
+
+  opacity: 1.5;
+  cursor: pointer;
+
+}
+*/
 /** The gender dropdown box order settings **/
 nav .section-gender #item-male__gender {
   -webkit-box-ordinal-group: 24;

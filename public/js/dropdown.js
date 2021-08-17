@@ -3,9 +3,11 @@
 const genderSelect = document.getElementById('item-gender__signup');
 const genderElements = document.querySelectorAll('.section-gender__select');
 
+const dobSelect = document.getElementById('item-dob__signup');
+
 let ans = 'null';
 
-/** FUNCTIONS */
+/** EVENT HANDLERS */
 
 // Click the gender down button - EVENTLISTENER
 //genderButton.addEventListener('click', function() {
@@ -14,8 +16,8 @@ genderSelect.addEventListener('click', function() {
   let buttonValue = setButtonValue(buttonCheck);
 
   // Press Button, Select Gender
-  changeDropdownButton(buttonValue);      // Change the button icon
-  changeDropdownState(buttonValue);       // Open/Close the dropdown menu
+  changeDropdownButton('gender', buttonValue);      // Change the button icon
+  changeDropdownState('gender', buttonValue);       // Open/Close the dropdown menu
 
 });
 
@@ -34,6 +36,28 @@ for (i of genderElements) {
   });
 
 }
+
+// Click the dob down button - EVENTLISTENER
+//genderButton.addEventListener('click', function() {
+dobSelect.addEventListener('click', function() {
+  let buttonCheck = document.getElementById('link-dob').innerHTML.trim();
+  let buttonValue = setButtonValue(buttonCheck);
+
+  // Press Button, Select Gender
+  changeDropdownButton('dob', buttonValue);      // Change the button icon
+  changeDropdownState('dob', buttonValue);       // Open/Close the dropdown menu
+
+});
+
+$(function() {
+
+  $("#select__dob").datepicker({
+    changeYear: true
+  });
+  $("#select__dob").datepicker("setDate", "-18y");
+
+});
+
 
 /** FUNCTIONS */
 
@@ -56,13 +80,20 @@ function setButtonValue(buttonValue) {
 
 /** Change the icon on the dropdown button 
     Used for the gender and dob selectors on the signup */
-function changeDropdownButton(buttonValue) {
-  //console.log("changeDownButton = " + buttonValue);
+function changeDropdownButton(dropdownValue, buttonValue) {
+  console.log("dropdownValue = " + dropdownValue);
 
   if (buttonValue == 'down') {
     $('.section-nav').css('overflow', 'visible');
 
-    document.getElementById('link-gender').innerHTML = '<i class="fa fa-angle-up" id="down-chevron"></i>';
+    // Check for gender else dob 
+    if (dropdownValue == 'gender') {
+      document.getElementById('link-gender').innerHTML = '<i class="fa fa-angle-up" id="down-chevron"></i>';
+      return;
+
+    }
+
+    document.getElementById('link-dob').innerHTML = '<i class="fa fa-angle-up" id="down-chevron"></i>';
     return;
 
   }
@@ -71,7 +102,14 @@ function changeDropdownButton(buttonValue) {
   setTimeout(function() {
     $('.section-nav').css('overflow', 'hidden');
 
-    document.getElementById('link-gender').innerHTML = '<i class="fa fa-angle-down" id="down-chevron"></i>';
+    // Check for gender else dob 
+    if (dropdownValue == 'gender') {
+      document.getElementById('link-gender').innerHTML = '<i class="fa fa-angle-down" id="down-chevron"></i>';
+      return;
+
+    }
+
+    document.getElementById('link-dob').innerHTML = '<i class="fa fa-angle-down" id="down-chevron"></i>';
     return;
 
   }, 250);
@@ -80,27 +118,59 @@ function changeDropdownButton(buttonValue) {
 
 /** Change the state of the dropdown box
     Used for the gender and dob selectors on the signup */
-function changeDropdownState(buttonValue) {
+function changeDropdownState(dropdownValue, buttonValue) {
+  console.log("dropdownValue = " + dropdownValue);
 
   if (buttonValue == 'down') {
+  // add the menu extension to section-nav parent
 
-    // add the menu extension to section-nav parent
-    document.querySelector('.section-gender').classList.add('collapsed__gender');
-    genderSetup.forEach(unhideVisibility);
-    genderSetup.forEach(addActive);
-    document.querySelector('.gender').classList.add('active');
-    return;
+    // check for gender else dob
+    if (dropdownValue == 'gender') {
+      document.querySelector('.section-gender').classList.add('collapsed__gender');
+      genderSetup.forEach(unhideVisibility);
+      genderSetup.forEach(addActive);
+      document.querySelector('.gender').classList.add('active');
+      return;
+
+    }
+
+    document.querySelector('.section-dob').classList.add('collapsed__dob');
+    
+    //genderSetup.forEach(unhideVisibility);
+    //genderSetup.forEach(addActive);
+
+    dobSetup.forEach(unhideVisibility);
+    dobSetup.forEach(addActive);
+    
+    document.querySelector('.dob').classList.add('active');
+
+    return;    
 
   }
 
   // remove the menu extension to section-nav parent
-  document.querySelector('.section-gender').classList.remove('collapsed__gender');
-  genderSetup.forEach(removeActive);
-  document.querySelector('.gender').classList.remove('active');
+  // check for gender else dob
+  if (dropdownValue == 'gender') {
+    document.querySelector('.section-gender').classList.remove('collapsed__gender');
+    genderSetup.forEach(removeActive);
+    document.querySelector('.gender').classList.remove('active');
+  
+    setTimeout(function() {
+  
+      genderSetup.forEach(hideVisibility);
+      return;
+  
+    }, 500);
+
+  }
+
+  document.querySelector('.section-dob').classList.remove('collapsed__dob');
+  dobSetup.forEach(removeActive);
+  document.querySelector('.dob').classList.remove('active');
 
   setTimeout(function() {
 
-    genderSetup.forEach(hideVisibility);
+    dobSetup.forEach(hideVisibility);
     return;
 
   }, 500);

@@ -174,21 +174,22 @@
 
       <div class="dob">
 
+        <!-- Date Of Birth -->
+        <span class="section-nav__span" id="span-dob" name="dob">Date Of Birth</span>
+        <!-- Date Of Birth Calender Selector -->
         <ul class="section-dob">
 
-          <!-- Date Of Birth -->
-          <span class="section-nav__span" id="span-dob" name="dob">Date Of Birth</span>
+          <li class="section-dob__item signup" id="item__dob">
+            <div class="section-dob__select" id="select__dob" type="text"></div>
 
-          <!-- Month 
-          <span class="section-nav__span" id="span-month" name="month">Month</span>
+            <!--
+            <a class="section-gender__select" id="select-gender__male" name="male" href="#">
+              Male
+            </a>
+            -->
 
-          <!- Day 
-          <span class="section-nav__span" id="span-day" name="day">Day</span>
-
-          <!- Year 
-          <span class="section-nav__span" id="span-year" name="year">Year</span>
-          -->
-
+          </li>
+        
         </ul>
 
       </div>
@@ -351,3 +352,14 @@
     </li>
 
 -->
+
+
+          <!-- Month 
+          <span class="section-nav__span" id="span-month" name="month">Month</span>
+
+          <!- Day 
+          <span class="section-nav__span" id="span-day" name="day">Day</span>
+
+          <!- Year 
+          <span class="section-nav__span" id="span-year" name="year">Year</span>
+          -->
