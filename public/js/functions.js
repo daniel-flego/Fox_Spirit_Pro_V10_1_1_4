@@ -275,6 +275,14 @@ function resetGender() {
 
 }
 
+// Output the dob to the span
+function outputDOB(value) {
+  let selected = value;
+  
+  document.getElementById('span-dob').innerHTML = selected;
+}
+
+/** Subsdcription Functions */
 function subChecked() {
   document.getElementById('checkbox-subscribe').checked = true;
 

@@ -45,7 +45,8 @@
 
 }
 
-#down-chevron {
+#down-chevron,
+#up-chevron {
   vertical-align: top;
 }
 
@@ -80,6 +81,7 @@
     
     &__item.signup {
       padding: 3px 10px;
+      line-height: 20px;
     }
 
     &__select {
@@ -92,7 +94,7 @@
     }
 
     &.collapsed__dob {
-      max-height: 220px;
+      max-height: 320px;
       //margin-left: -120px;
     }
   
@@ -117,15 +119,11 @@
 .dob {
 
   .section-dob {
-
     margin-left: -130px;
 
   }
 
 }
-
-
-
 
 
 /**
@@ -155,17 +153,6 @@
 
   //background-color: $purple;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /******** DOB - Calendar **********/
 
@@ -264,18 +251,52 @@ $color-white: #fff;
         }
       }
     }
+
   }
 
 }
 
-/*
-.ui-datepicker-other-month:hover {
+.ui-state-default {
+  display: block;
+  text-decoration: none;
+  //color: #b5b5b5;
+  color: white;
+  //line-height: 30px;
+  line-height: 20px;
+  font-size: 12px;
 
-  opacity: 1.5;
-  cursor: pointer;
+  &:hover {
+    //background: rgba(0, 0, 0, 0.02);
+    opacity: 0.5;
+    cursor: pointer;
+  }
 
 }
-*/ 
+
+.ui-state-highlight {
+  //color: $color-one-dark;
+  //opacity: 0.5;
+}
+
+.ui-state-active {
+  color: $color-one-dark;
+  background-color: rgba(131, 146, 167, 0.12);
+  font-weight: 600;
+}
+
+.ui-datepicker-unselectable {
+  .ui-state-default {
+    /*
+    color: #eee;
+    //color: $purple;
+    border: 2px solid transparent;
+    */
+    opacity: 0.5;
+
+  }
+
+}
+
 
 
 

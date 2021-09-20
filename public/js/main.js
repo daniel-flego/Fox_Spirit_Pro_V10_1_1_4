@@ -40,7 +40,9 @@ menuToggleButton.addEventListener('click', function() {
                 (currentCollapsed.includes('collapsed__signup'))) {
           
           // Retract the gender dropdown if it's still active
-          if ($('.section-gender').hasClass('collapsed__gender')) {
+          if ($('.section-gender').hasClass('collapsed__gender') ||
+             ($('.section-dob').hasClass('collapsed__dob'))) {
+               //alert('YES!!');
 
             changeDropdownButton('up');      // Change the button icon
             changeDropdownState('up');       // Open/Close the dropdown menu
@@ -52,6 +54,7 @@ menuToggleButton.addEventListener('click', function() {
                 openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
   
                 document.getElementById('span-gender').innerHTML = 'Gender';
+                // add something to reset the dob span here!!
 
               }, 600);
 
@@ -66,6 +69,9 @@ menuToggleButton.addEventListener('click', function() {
             // Reset subscription checkbox and gender
             subUnchecked();
             resetGender();
+
+            // add a resetDOB() here!!
+
             //document.getElementById('checkbox-subscribe').checked = false;    
             openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
 

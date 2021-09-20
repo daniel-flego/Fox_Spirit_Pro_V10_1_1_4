@@ -182,12 +182,6 @@
           <li class="section-dob__item signup" id="item__dob">
             <div class="section-dob__select" id="select__dob" type="text"></div>
 
-            <!--
-            <a class="section-gender__select" id="select-gender__male" name="male" href="#">
-              Male
-            </a>
-            -->
-
           </li>
         
         </ul>
