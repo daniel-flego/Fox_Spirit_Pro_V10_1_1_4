@@ -11,7 +11,6 @@
     <!-- Toggle -->
     <li class="section-nav__item" id="item-toggle" name="menu">
       <a class="section-nav__link" id="link-toggle" href="#">
-        <!--<i class="fa fa-bars"></i>-->
       </a>
     </li>
 
@@ -28,7 +27,7 @@
       </a>
     </li>
 
-    <!-- Collapsible Menu -->
+    <!-- Collapsable Menu -->
     <li class="section-nav__item menu" id="item-menu__menu">
       <p class="section-nav__pre" id="pre-menu">
         Menu
@@ -55,7 +54,7 @@
       </a>
     </li>
 
-    <!-- Collapsible Login -->
+    <!-- Collapsable Login -->
     <!-- Title -->
     <li class="section-nav__item login" id="item-login__login">
       <p class="section-nav__pre" id="pre-login">
@@ -76,16 +75,8 @@
         Login
       </button>
     </li>
-
-<!--  -- Collapsible Logout -- ????
-    <li class="section-nav__item logout" id="item-submit__logout">
-      <button  type="submit" class="section-nav__button" id="button-submit__logout" name="submit-logout">
-        Logout
-      </button>
-    </li>
--->
   
-    <!-- Collapsible Signup -->
+    <!-- Collapsable Signup -->
     <!-- 
       Pt 1 
       1. First Name, 2. Last Name, 3. Email, 4. Address, 
@@ -125,7 +116,6 @@
 
     <!-- ********************************************************************* -->
     
-    
     <!-- Gender - Drop Down Box Output --> 
     <li class="section-nav__item signup" id="item-gender__signup">
 
@@ -151,8 +141,7 @@
             <a class="section-gender__select" id="select-gender__other" name="other" href="#">
               Other
             </a>
-          </li>
-          
+          </li>    
 
         </ul>
 
@@ -219,10 +208,6 @@
       <label class="section-nav__label" id="label-yes" name="subscribe-label__signup" for="yes">
         Subscribe to our newsletter?
       </label>
-
-      <!--
-      <input class="section-nav__input" id="input-yes" name="subscribe-yes__signup" type="checkbox" value="no" checked="false">
-      -->
       <input class="section-nav__input" id="checkbox-subscribe" name="subscribe__signup" type="checkbox">
 
     </li>
@@ -267,93 +252,9 @@
 </nav>
 
 
+<!-- Lesson-1 
+  https://www.youtube.com/watch?v=LC9GaXkdxF8&t=187s
+  upto - 15:41
+  upto - 54:20
+  -->
 
-    <!-- ORIGINAL
-    <li class="section-nav__item login" id="item-mailuid__login">
-      <input type="text" class="section-nav__input" id="input-mailuid" name="mailuid" placeholder="Email/Username...">  
-    </li>
-    -->
-    <!-- ORIGINAL USENAME/EMAIL
-    <li class="section-nav__item signup" id="item-mailuid__signup">
-      <input class="section-nav__input" id="input-mailuid" name="mailuid__signup" type="text" placeholder="Email/Username...">  
-    </li>
-    -->
-
-
-
-
-        <!-- Lesson-1 
-          https://www.youtube.com/watch?v=LC9GaXkdxF8&t=187s
-          upto - 15:41
-          upto - 54:20
-          -->
-
-
-    <!-- Signup Previous -->
-    <!-- 
-      1. Make it invisible when page 1 is active
-      2. Make it visible when page 2 is active
-      3. It goes back to page 1 when selected 
-    -->
-    <!--
-    <li class="section-nav__item signup" id="item-prev__signup">
-
-      <button class="section-nav__button" id="button-prev__signup" name="submit__signup" type="submit">
-        Prev
-      </button>
-
-    </li>
-    -->
-
-    <!-- Signup Next/Submit -->
-    <!-- 
-      1. Make it a next button to load the page 2
-      2. When page 2 is loaded turn it into a submit button
-    -->
-    <!--
-    <li class="section-nav__item signup" id="item-submit__signup">
-
-      <button class="section-nav__button" id="button-submit__signup" name="submit__signup" type="submit">
-        Signup
-      </button>
-
-    </li>
-    -->
-
-    <!-- Making Combined Submit Previous Buttons -->
-
-<!--
-      <a class="section-nav__link" id="link-left" href="#"><i class="fa fa-chevron-left"></i></a>
-      
-      <a class=""></a>
--->
-
-<!--
-
-    <!-- Gender, drop downbox with Male, Female, Other as options. 
-    <li class="section-nav__item signup" id="item-gender__signup">
-      <select class="section-nav__input" id="input-gender" name="gender" type="text" placeholder="Gender...">
-        <option class="gender__option" value="none">Select Geneder</option>
-        <option class="gender__option" value="male">Male</option>
-        <option class="gender__option" value="female">Female</option>
-        <option class="gender__option" value="other">Other</option>
-      </select>  
-    </li>
-
-    <!-- Date of birth, date element, I can get the age from. 
-    <li class="section-nav__item signup" id="item-dob__signup">
-      <input class="section-nav__input" id="input-dob" name="dob" type="date" placeholder="Date Of Birth...">  
-    </li>
-
--->
-
-
-          <!-- Month 
-          <span class="section-nav__span" id="span-month" name="month">Month</span>
-
-          <!- Day 
-          <span class="section-nav__span" id="span-day" name="day">Day</span>
-
-          <!- Year 
-          <span class="section-nav__span" id="span-year" name="year">Year</span>
-          -->

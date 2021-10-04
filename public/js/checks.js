@@ -16,7 +16,6 @@ const desktopSize = '1000';                     // Desktop Size
  * 
  */
 
-
 /** Return Current Window Size Of The Screen 
     - the value of the section class is the same */
 function checkWindowSize() {
@@ -24,17 +23,21 @@ function checkWindowSize() {
   // Mobile Size
   if (window.innerWidth <= tabletSize) {
     return 'mobile';
+
   }
   // Tablet Size
   else if ((window.innerWidth > tabletSize) && (window.innerWidth <= desktopSize)) {
     return 'tablet';
+
   }
   // Desktop Size
   else if (window.innerWidth > desktopSize) {
      return 'desktop';
+
   }
 
   return 'Error - checkWindowSize() - Line 37';
+
 }
 
 /** Return The Value Of The Section State 
@@ -49,33 +52,41 @@ function checkCollapsedState() {
   // this is the only way to get the class name
   else if ($('.section-nav').hasClass('mobile-collapsed__menu')) {
     return 'mobile-collapsed__menu';
+
   }
   else if ($('.section-nav').hasClass('mobile-collapsed__login')) {
     return 'mobile-collapsed__login';
+
   }
   else if ($('.section-nav').hasClass('mobile-collapsed__signup')) {
     return 'mobile-collapsed__signup';
+
   }
   
   //** Tablet */
   else if ($('.section-nav').hasClass('tablet-collapsed__menu')) {  
     return 'tablet-collapsed__menu';
+
   }
   else if ($('.section-nav').hasClass('tablet-collapsed__login')) {
     return 'tablet-collapsed__login';
+
   }
   else if ($('.section-nav').hasClass('tablet-collapsed__signup')) {
     return 'tablet-collapsed__signup';
+
   }
 
   //** Desktop */
   else if ($('.section-nav').hasClass('desktop-collapsed__signup')) {
     return 'desktop-collapsed__signup';
+
   }
 
   /** ERROR */
   else {
     console.log("ERROR - checkCollapsedState() - No Current 'section-nav' extension");
+    
   }
 
 }

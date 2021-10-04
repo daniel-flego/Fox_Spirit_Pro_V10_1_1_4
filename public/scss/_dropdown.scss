@@ -16,7 +16,6 @@
 }
 
 .section-nav__span {
-  //display: block;
   font-size: 12px;
   line-height: 200%;
 
@@ -95,7 +94,6 @@
 
     &.collapsed__dob {
       max-height: 320px;
-      //margin-left: -120px;
     }
   
   }
@@ -125,7 +123,6 @@
 
 }
 
-
 /**
   Git Tutorial
   https://www.youtube.com/watch?v=SWYqp7iY_Tc&t=1169s
@@ -134,8 +131,6 @@
   //https://www.freecodecamp.org/news/css-positioning-and-flexbox-explained/
 **/
 
-
-
 /** Subscription **/
 
 #label-yes {
@@ -143,15 +138,9 @@
 }
 
 #checkbox-subscribe {
-  //border-radius: 2px;
-  //font-size: 4px;
-
-  //border: 1px;
-
   height: 18px;
   max-width: 25%;
 
-  //background-color: $purple;
 }
 
 /******** DOB - Calendar **********/
@@ -160,20 +149,9 @@ $color-one-light: #8392a7;
 $color-one-dark: #68768a;
 $color-white: #fff;
 
-/*
-.ui-datepicker-inline {
-  background-color: red;
-
-  position: relative;
-  width: 100%;
-}
-*/ 
-
 .ui-datepicker-header {
   height: 50%;
   line-height: 25px;
-  //background: $color-one-light;
-  //color: $color-white;
   margin-bottom: 10px;
 }
 
@@ -259,23 +237,15 @@ $color-white: #fff;
 .ui-state-default {
   display: block;
   text-decoration: none;
-  //color: #b5b5b5;
   color: white;
-  //line-height: 30px;
   line-height: 20px;
   font-size: 12px;
 
   &:hover {
-    //background: rgba(0, 0, 0, 0.02);
     opacity: 0.5;
     cursor: pointer;
   }
 
-}
-
-.ui-state-highlight {
-  //color: $color-one-dark;
-  //opacity: 0.5;
 }
 
 .ui-state-active {
@@ -286,11 +256,6 @@ $color-white: #fff;
 
 .ui-datepicker-unselectable {
   .ui-state-default {
-    /*
-    color: #eee;
-    //color: $purple;
-    border: 2px solid transparent;
-    */
     opacity: 0.5;
 
   }

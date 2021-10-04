@@ -90,10 +90,8 @@ function setSignupPages() {
   }
 
   // Setup dobArray
-  //console.log(document.getElementById('item__dob'));
   dobArray.push(document.getElementById('item__dob'));
 
-  //console.log(elementsList);
   console.log(genderArray);
   console.log(dobArray);
 

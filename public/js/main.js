@@ -42,19 +42,23 @@ menuToggleButton.addEventListener('click', function() {
           // Retract the gender dropdown if it's still active
           if ($('.section-gender').hasClass('collapsed__gender') ||
              ($('.section-dob').hasClass('collapsed__dob'))) {
-               //alert('YES!!');
 
-            changeDropdownButton('up');      // Change the button icon
-            changeDropdownState('up');       // Open/Close the dropdown menu
+            // Close the gender and/or dob dropdown menu/s
+            if ($('.section-gender').hasClass('collapsed__gender')) {
+              closeCurrentDropdown('gender', 'up');
+
+            }
+            else if ($('.section-dob').hasClass('collapsed__dob')) {
+              closeCurrentDropdown('dob', 'up');
+
+            }   
 
             setTimeout(function() {
               closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
 
               setTimeout(function() {
                 openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
-  
                 document.getElementById('span-gender').innerHTML = 'Gender';
-                // add something to reset the dob span here!!
 
               }, 600);
 
@@ -69,10 +73,7 @@ menuToggleButton.addEventListener('click', function() {
             // Reset subscription checkbox and gender
             subUnchecked();
             resetGender();
-
-            // add a resetDOB() here!!
-
-            //document.getElementById('checkbox-subscribe').checked = false;    
+  
             openMainMenu('no', currentWindow, 'mobile-collapsed__menu');      // Open the main menu
 
           }, 500);
@@ -94,11 +95,16 @@ menuToggleButton.addEventListener('click', function() {
                 (currentCollapsed.includes('collapsed__signup'))) {
           
           // Retract gender dropdown if it's atill active
-          if ($('.section-gender').hasClass('collapsed__gender')) {
-            //alert("YES!!");
+          if ($('.section-gender').hasClass('collapsed__gender') ||
+             ($('.section-dob').hasClass('collapsed__dob'))) {
 
-            changeDropdownButton('up');      // Change the button icon
-            changeDropdownState('up');       // Open/Close the dropdown menu
+            // Close the gender and/or dob dropdown menu/s
+            if ($('.section-gender').hasClass('collapsed__gender')) {
+              closeCurrentDropdown('gender', 'up');
+            }
+            else if ($('.section-dob').hasClass('collapsed__dob')) {
+              closeCurrentDropdown('dob', 'up');
+            }
 
             setTimeout(function() {
               closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login menu
@@ -140,25 +146,26 @@ menuToggleButton.addEventListener('click', function() {
       else if (currentCollapsed.includes('desktop')) {
         
         // Retract the gender dropdown if it's still 'active'
-        if ($('.section-gender').hasClass('collapsed__gender')) {
+        if ($('.section-gender').hasClass('collapsed__gender') ||
+           ($('.section-dob').hasClass('collapsed__dob'))) {
           
-          changeDropdownButton('up');      // Change the button icon
-          changeDropdownState('up');       // Open/Close the dropdown menu
+          // Close the gender and/or dob dropdown menu/s
+          if ($('.section-gender').hasClass('collapsed__gender')) {
+            closeCurrentDropdown('gender', 'up');
+          }
+          else if ($('.section-dob').hasClass('collapsed__dob')) {
+            closeCurrentDropdown('dob', 'up');
+          }
 
           setTimeout(function() {
-            //closeLoginMenu('no', currentWindow, currentCollapsed);              // Close login/signup menu
             closeSignupMenu('yes', currentWindow, currentCollapsed);              // Close login/signup menu
 
             setTimeout(function() {
-              //openMainMenu('no', currentWindow, 'desktop-collapsed__menu');      // Open the main menu
-
               // Reset subscription checkbox and gender
               subUnchecked();
               resetGender();
 
               document.querySelector('.section-nav').classList.add(currentWindow);
-              
-              //document.getElementById('span-gender').innerHTML = 'Gender'; 
 
             }, 600);
 
@@ -178,8 +185,6 @@ menuToggleButton.addEventListener('click', function() {
   
         }, 500);
 
-        // if gender dropdown is 'active'
-
       }
       /** Desktop Error */
       else {
@@ -187,7 +192,6 @@ menuToggleButton.addEventListener('click', function() {
       }
 
     }
-    /** Error 'undefined' todo */
     
   }
   /** MENU ERROR */
@@ -251,7 +255,6 @@ loginButton.addEventListener('click', function() {
       }
 
     }
-    /** Error 'undefined' todo */
   
   }
   /** Mobile Error */
@@ -270,13 +273,10 @@ signupButton.addEventListener('click', function() {
   if (compareUncollapsedList($(".section-nav"))) {
     currentCollapsed = setCollapsedState(currentWindow, currentButton);
 
-    //console.log(currentCollapsed);
-
     if (currentWindow.includes('mobile')) {
       openMainMenu('yes', currentWindow, currentCollapsed);                           // Open main menu
     }
     else {
-      //alert("YES!!3");
       openSignupPageOne('yes', currentWindow, currentCollapsed);                      // Open the signup menu
     }
     
@@ -339,9 +339,7 @@ signupButton.addEventListener('click', function() {
         console.log("ERROR - signup 'signup-button' eventlistener");
       }
 
-
     }
-    /** Error 'undefined' */
 
   }
 
@@ -353,13 +351,18 @@ signupButton.addEventListener('click', function() {
 nextButton.addEventListener('click', function() {
   let currentWindow = checkWindowSize();               // Get current window size
   let currentCollapsed = checkCollapsedState();        // Get current section state
-  //alert("YES$%");
 
   // Retract the gender dropdown if it's still active
-  if ($('.section-gender').hasClass('collapsed__gender')) {
+  if ($('.section-gender').hasClass('collapsed__gender') ||
+     ($('.section-dob').hasClass('collapsed__dob'))) {
 
-    changeDropdownButton('up');      // Change the button icon
-    changeDropdownState('up');       // Open/Close the dropdown menu
+    // Close the gender and/or dob dropdown menu/s
+    if ($('.section-gender').hasClass('collapsed__gender')) {
+      closeCurrentDropdown('gender', 'up');
+    }
+    else if ($('.section-dob').hasClass('collapsed__dob')) {
+      closeCurrentDropdown('dob', 'up');
+    }
 
     setTimeout(function() {
       closeSignupMenu('no', currentWindow, currentCollapsed);     // Close signuo menu
@@ -397,7 +400,6 @@ prevButton.addEventListener('click', function() {
 });
 
 checkSubscription.addEventListener('click', function() {
-  //alert("YES!!");
   
   if (checked == 'true') {
     checked = 'false';
@@ -452,7 +454,6 @@ $(window).resize(function() {
 });
 
 function resizeUncollapsed() {
-/** resizeNav() */
  let currentWindow = checkWindowSize();                // Get current window size
  let currentCollapsed = checkCollapsedState();         // Get current section state  
 
@@ -462,19 +463,22 @@ function resizeUncollapsed() {
 
     /** Mobile Size - Doesn't Happen */
     if ($(".section-nav").hasClass('mobile')) {
-      //console.log("Mobile");
+
     }
     /** resizing from tablet to mobile size */
     else if ($(".section-nav").hasClass('tablet')) { 
       resizeNav('tablet');
+
     }
     /** Desktop Size */
     else if ($(".section-nav").hasClass('desktop')) {
       resizeNav('desktop');
+
     }
     /** Error */
     else {
       console.log("Error - resize 1, the uncollapsed nav bar - mobile");
+
     }
 
    }
@@ -483,14 +487,17 @@ function resizeUncollapsed() {
     /** resizing from mobile to tablet size */
     if ($(".section-nav").hasClass('mobile')) {
       resizeNav('mobile');
+
     }
     /** resizing from desktop to tablet size */
     else if ($(".section-nav").hasClass('desktop')) {
       resizeNav('desktop');
+      
     }
     /** Tablet Size - Doesn't Happen */
     else if ($(".section-nav").hasClass('tablet')) {
       //console.log("Tablet");
+
     }
     /** Error */
     else {
@@ -503,18 +510,21 @@ function resizeUncollapsed() {
     /** resizing to mobile */
     if ($(".section-nav").hasClass('mobile')) {
       resizeNav('mobile');
+
     }
     /** resizing to tablet*/
     else if ($(".section-nav").hasClass('tablet')) {
       resizeNav('tablet');
+
     }
     /** resizing back to desktop */
     else if ($(".section-nav").hasClass('desktop')) {
-      //console.log("Desktop");
+
     }
     /** Error Size */
     else {
       console.log("Error - resize 1, the uncollapsed nav bar - desktop");
+
     }
 
    }
@@ -536,10 +546,12 @@ function resizeCollapsedMenu() {
   }
   else if (currentCollapsed === 'desktop-collapsed__menu') {
     /** This one needs to disappear */
+
   }
   /** ERROR! */
   else {
     console.log("ERROR - resizeCollapsedMenu() event, main.js");
+
   }
 
 }
@@ -549,16 +561,20 @@ function resizeCollapsedLogin() {
 
   if (currentCollapsed === 'mobile-collapsed__login') {
     resizeLogin(currentCollapsed);
+
   }
   else if (currentCollapsed === 'tablet-collapsed__login') {
     resizeLogin(currentCollapsed);
+
   }
   else if (currentCollapsed === 'desktop-collapsed__login') {
     /** This one needs to disappear */
+
   }
   /** ERROR! */
   else {
     console.log("ERROR - resizeCollapsedLogin() event, main.js");
+
   }
   
 }
@@ -568,25 +584,27 @@ function resizeCollapsedSignup() {
 
   if (currentCollapsed === 'mobile-collapsed__signup') {
     resizeSignup(currentCollapsed);
+
   }
   else if (currentCollapsed === 'tablet-collapsed__signup') {
     resizeSignup(currentCollapsed);
+
   }
   else if (currentCollapsed === 'desktop-collapsed__signup') {
     resizeSignup(currentCollapsed);
+
   }
   /** ERROR! */
   else {
     console.log("ERROR - resizeCollapsedSignup() event, main.js");
+
   }
 
 }
-
-
-
 
 /**
  *** Debugging Tutorial ***
   https://www.youtube.com/watch?v=AX7uybwukkk
   11:40 - VS Code
   */
+ 

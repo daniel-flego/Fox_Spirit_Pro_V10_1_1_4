@@ -5,7 +5,6 @@
   <main>
 
     <div class="hero">
-      <!--<div class="hero-container">-->
 
         <div class="info">
           <section class="section-info">
@@ -24,7 +23,7 @@
           </h2>
 
         </div>
-      <!--</div>-->
+
     </div>
 
   </main>
@@ -32,16 +31,3 @@
 <?php 
   require "footer.php";
 ?>
-
-
-
-
-
-
-<!--
-  <div class="banner">
-
-    <img class="banner__img" src="../public/img/ocean1.jpg" alt="foxspirit__banner">
-
-  </div>
--->

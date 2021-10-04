@@ -13,7 +13,6 @@ function openMainMenu(loginInfoValue, sectionStateValue, extensionValue) {
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
-  //console.log(currentToggle);
 
   // toggle the login info status - remove
   if (loginInfo === 'yes') {
@@ -31,11 +30,9 @@ function openMainMenu(loginInfoValue, sectionStateValue, extensionValue) {
       - Change toggle
       - Change active
   */
-  //console.log(currentToggle);
   changeToggleValue(currentToggle);
   setDisplayArray(displayArray);          // Get the list of current display
   
-  //console.log(displayArray);
   displayArray.forEach(addActive);        // Add 'active' to the classnames
 
 }
@@ -114,8 +111,6 @@ function closeLoginMenu(loginInfoValue, sectionStateValue, extensionValue) {
   let extension = extensionValue;
   // the current value of the menu toggle icon 
   let currentToggle = document.getElementById('link-toggle').innerHTML;
-  
-  //alert('YES$%');
 
   // remove the login info status
   if (loginInfo === 'yes') {
@@ -157,7 +152,7 @@ function closeSignupMenu(loginInfoValue, sectionStateValue, extensionValue) {
   if (loginInfo === 'yes') {
     toggleLoginInfo('collapsed');          
   }
-//alert("YES");
+
   // remove the menu extension to section-nav parent
   document.querySelector('.section-nav').classList.remove(extension);
 
@@ -167,7 +162,6 @@ function closeSignupMenu(loginInfoValue, sectionStateValue, extensionValue) {
   uncollapseArray.forEach(hideVisibility);
 
   // bc of the way the menu toggle moves around in desktop state
-  //console.log(sectionState);
   if (sectionState === 'desktop') {
     hideVisibility(itemToggle);
 
@@ -195,17 +189,11 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
   let loginInfo = loginInfoValue;
   let sectionState = sectionStateValue;
   let extension = extensionValue;
-  // the current value of the menu toggle icon 
-  let currentToggle = document.getElementById('link-toggle').innerHTML;
-  //alert("YES!!");
 
   // remove the login info status
   if (loginInfo === 'yes') {
-    //alert("YES!!3");
     toggleLoginInfo('none');         
   }
-
-  //toggleLoginInfo(loginInfo); 
   
   // remove current section state from the section-nav parent class name
   document.querySelector('.section-nav').classList.remove(sectionState);
@@ -213,12 +201,10 @@ function openSignupPageOne(loginInfoValue, sectionStateValue, extensionValue) {
   prevIteration();        // Update the previous iteration link
   
   // Call to prev page, making correct elements show and active
-  //console.log(signupPageTwo);
   signupPageTwo.forEach(hideVisibility);
   signupPageTwo.forEach(removeActive);
 
   // Set up an array for the gender and dob dropdown and  it's list elements
-  //console.log(genderSetup);
   genderSetup.forEach(hideVisibility);
   genderSetup.forEach(removeActive);
 
@@ -395,9 +381,6 @@ function resizeSignup(collapsedStateValue) {
   let addCollapseState = currentWindow + '-collapsed__signup';
   let removeCollapseState = collapsedStateValue;
 
-  //console.log("remove this " + removeCollapseState);
-  //console.log("add this " + addCollapseState);
-
   if (currentWindow === 'mobile') {
 
     /** moving from the current window(tablet) size to mobile 
@@ -438,19 +421,20 @@ function resizeSignup(collapsedStateValue) {
     /** moving from the current window(desktop) size to tablet 
     - from tablet to desktop is the only possibility */
     if ($(".section-nav").hasClass('tablet-collapsed__signup')) {
-
       collapsedResizeProcedure(removeCollapseState, addCollapseState);
 
     }
     /** Error */
     else {
       console.log("Error - resizeSignup(...) desktop");
+
     }
 
   }
   /** Error */
   else {
     console.log("Error - resizeSignup(...)");
+
   }
 
 }
@@ -470,16 +454,8 @@ function closeLoginDesktop(loginInfoValue, sectionStateValue, extensionValue) {
   // remove the menu extension to section-nav parent
   document.querySelector('.section-nav').classList.remove(extension);
 
-  // prepare elements list for withdrawing the login menu
-  // This must happen after 'active' is set !!!
-  //setUncollapseArray(uncollapseArray);
-  //uncollapseArray.forEach(hideVisibility);
-
-  /**
-    Make the elements in the current collapsed menu invisible 
-  */
+  // make the elements in the current collapsed menu invisible 
   setSignupArray(uncollapseArray);
-  //console.log(uncollapseArray);
   uncollapseArray.forEach(switchVisibility);
   
   setTimeout(function () {

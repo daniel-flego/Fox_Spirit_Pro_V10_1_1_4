@@ -2,9 +2,7 @@
 /**
 This is a good tutorial/info for using
 flexbox and css grids
-
 https://getflywheel.com/layout/combine-flexbox-and-css-grids-for-layouts-how-to/
-
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 **/
@@ -68,7 +66,6 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     - When no-prev is present (start with)
       - The left link is in-active 
   */
-
   &.noPrev .left {
     opacity: 0.9;
     pointer-events: none;

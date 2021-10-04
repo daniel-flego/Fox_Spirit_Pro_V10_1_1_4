@@ -23,49 +23,34 @@ function setCollapsedState(currentWindowValue, currentButtonValue) {
   let currentButton = currentButtonValue;
   let currentCollapsed = null;
 
-  //console.log(currentWindow);
-  //console.log(currentButton);
-
   if (currentWindow == 'mobile') {
 
     if (currentButton == 'item-toggle') {
       currentCollapsed = currentWindow + '-collapsed__menu';
     }
-    /** NOT IN USE FOR NOW
-    else if (menuToggleButton.id == 'item-login') {
-      currentCollapsed = currentWindow + '-collapsed__login';
-    }
-    else if (menuToggleButton.id == 'item-signup') {
-      currentCollapsed = currentWindow + '-collapsed__signup';
-    }
-    */
 
   }
   else if (currentWindow == 'tablet') {
     
     if (currentButton == 'item-toggle') {
       currentCollapsed = currentWindow + '-collapsed__menu';
+
     }
     else if (currentButton == 'item-login') {
       currentCollapsed = currentWindow + '-collapsed__login';
+
     }
     else if (currentButton == 'item-signup') {
       currentCollapsed = currentWindow + '-collapsed__signup';
+
     }
 
   }
   else if (currentWindow == 'desktop') {
 
-    /** NOT IN USE FOR NOW
-    if (currentButton == 'item-toggle') {
-      currentCollapsed = currentWindow + '-collapsed__menu';
-    }
-    else if (currentButton == 'item-login') {
-      currentCollapsed = currentWindow + '-collapsed__login';
-    }
-    */
     if (currentButton == 'item-signup') {
       currentCollapsed = currentWindow + '-collapsed__signup';
+
     }
 
   }
@@ -77,18 +62,6 @@ function setCollapsedState(currentWindowValue, currentButtonValue) {
 
 }
 
-/** Set the collapsed state on the section-nav class name
-    - needed when web site and resizing */
-    /*
-function setCollapsedState() {
-  let currentCollapsed = null; 
-
-  currentCollapsed = checkCollapsedState();
-  document.querySelector('.section-nav').classList.add(currentCollapsed);
-
-}
-*/
-
 function setMenuToggle() {
   document.getElementById('link-toggle').innerHTML = '<i class="fa fa-bars"></i>';
 
@@ -97,8 +70,6 @@ function setMenuToggle() {
 /** Toggle the login info status div visible or not */
 function toggleLoginInfo(value) {
   let state = value;
-
-  //console.log(value);
 
   if (state === 'none') {
     $(".info").toggle();
@@ -109,12 +80,6 @@ function toggleLoginInfo(value) {
     }, 500);
 
   }
-  /*
-  else if (state === 'collapsed') {
-    //alert("YES!!");
-    $(".info").toggle();
-  }
-  */
   else {
     // clear the collapsed section
     $(".info").toggle(1000);
@@ -129,11 +94,11 @@ function changeToggleValue(currentToggleValue) {
 
   if (currentToggle === '<i class="fa fa-bars"></i>') {
     document.getElementById('link-toggle').innerHTML = '<i class="fa fa-times"></i>';
-    //return '<i class="fa fa-times"></i>';
+
   }
   else if (currentToggle === '<i class="fa fa-times"></i>') {
     document.getElementById('link-toggle').innerHTML = '<i class="fa fa-bars"></i>';
-    //return '<i class="fa fa-bars"></i>';
+
   }
   else {
     console.log("Error!! - changeToggleValue() function");
@@ -186,10 +151,11 @@ function removeActive(value) {
 
 /** Hide each element from the array passed */
 function hideVisibility(element) {
-  
+
   if ((typeof element !== 'undefined')) {
     element.style.visibility = 'hidden';
     element.style.display = 'none';
+
   }
 
 }
@@ -205,7 +171,7 @@ function switchVisibility(element) {
   
   if ((typeof element !== 'undefined')) {
     element.style.visibility = 'hidden';
-    //element.style.display = 'none';
+
   }
 
 }
@@ -214,7 +180,6 @@ function switchVisibility(element) {
 function pageOneSetup(value, index) {
 
   if ((index >= '0') && (index <= '7')) {
-    //console.log(value);
     return value;
     
   }
@@ -282,14 +247,13 @@ function outputDOB(value) {
   document.getElementById('span-dob').innerHTML = selected;
 }
 
-/** Subsdcription Functions */
+/** Subscription Functions */
 function subChecked() {
   document.getElementById('checkbox-subscribe').checked = true;
 
 }
 
 function subUnchecked() {
-  //alert('HERE!!');
   document.getElementById('checkbox-subscribe').checked = false;
 
 }
