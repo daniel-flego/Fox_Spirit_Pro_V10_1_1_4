@@ -39,6 +39,13 @@ dobSelect.addEventListener('click', function() {
 
 });
 
+// Making the span send it's value to php
+$("form[includes/navigation.inc.php]").on("submit", event => {
+  $("form[includes/navigation.inc.php]").append(
+    `<input name="hidden" type="hidden" value="${$("span-gender").text()}" />`
+  );
+});
+
 
 /** SET-UP FUNCTIONS */
 

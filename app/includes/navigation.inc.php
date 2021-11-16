@@ -7,10 +7,10 @@
   if ((!isset($_POST['login'])) && (!isset($_POST['signup']))) {
     echo "YES" . "<br>";
 
-    if (isset($_POST['submit__login'])) {
+    if (isset($_POST['login__submit'])) {
       echo "Login";  
     }
-    else if (isset($_POST['submit__signup'])) {
+    else if (isset($_POST['signup__submit'])) {
       echo "Signup";
       require "signup.inc.php";
 

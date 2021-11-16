@@ -1,82 +1,76 @@
 
 <?php
+echo "This is it";
+if (isset($_POST['signup__submit']))   {
+  //require "dbh.inc.php";
 
-if (isset($_POST['submit__signup']))   {
-  require "dbh.inc.php";
-
-  $firstname = $_POST['firstname'];
-  $lastname = $_POST['lastname'];
+  // page 1
+  $firstName = $_POST['firstname__signup'];
+  $lastName = $_POST['lastname__signup'];
+  $address = $_POST['address__signup'];
+  $phone = $_POST['phone__signup'];
   $email = $_POST['email__signup'];
-  $username = $_POST['username__signup'];
-  $password = $_POST['pwd__signup'];
-  $passwordRepeat = $_POST['pwd-repeat__signup'];
 
-  if (empty($firstname) || empty($lastname) || empty($username) || empty($email) || empty($password) || empty($passwordRepeat)) {
+  // page 2
+  $gender = $_POST['gender__signup'];
+  $dob = $_POST['dob__signup'];
+  $userName = $_POST['username__signup'];
+  $pwd = $_POST['pwd__signup'];
+  $pwdRepeat = $_POST['pwd-repeat__signup'];
+  // bc it's a checkbox
+  $subscribe = isset($_POST['subscribe__signup']) ? 1 : 0;
 
-    //header("Location: ../navigation.php?error=emptyfields&firstname=".$firstname."&lastname=".$lastname."&mail=".$email);
+  require_once 'dbh.inc.php';
+  require_once 'functions.inc.php';
 
-    header("Location: ../index.php?error=emptyfields&firstname=".$firstname."&lastname=".$lastname."&username".$username."&email=".$email);
+  if (emptyInputSignup($firstName, $lastName, $address, $phone, $email, $gender, $dob, 
+  $userName, $pwd, $pwdRepeat, $subscribe) !== false) {
+    //header("location: ../signup.php");
+    //header("location: ../navigation.php?error=emptyinput");
+    header("location: ../header.php?error=emptyinput");
     exit();
-
   }
-  // Invalid email, username 
-  else if ((!filter_var($email, FILTER_VALIDATE_EMAIL)) &&
-           (!preg_match("/^[a-zA-Z0-9]*$/", $username))) {
-    header("Location: ../index.php?error=invalidemailuid");
+  if (invalidUid($userName) !== false) {
+    //header("location: ../signup.php");
+    //header("location: ../navigation.php?error=invaliduid");
+    header("location: ../header.php?error=invaliduid");
     exit();
-    
   }
-  // Invalid email
-  else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header("Location: ../index.php?error=invalidemail&uid".$username);
+  if (invalidEmail($email) !== false) {
+    //header("location: ../signup.php");
+    //header("location: ../navigation.php?error=invalidemail");
+    header("location: ../header.php?error=invalidemail");
     exit();
-
   }
-  else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    header("Location: ../index.php?error=invalidusername&email".$email);
+  if (pwdMatch($pwd, $pwdRepeat) !== false) {
+    //header("location: ../signup.php");
+    //header("location: ../navigation.php?error=pwdsnomatch");
+    header("location: ../header.php?error=pwdsnomatch");
     exit();
-
   }
-
-  // Invalid firstname and lastname
-    else if ((!preg_match("/^[a-zA-Z0-9]*$/", $firstname)) &&
-             (!preg_match("/^[a-zA-Z0-9]*$/", $lastname))) {
-      header("Location: ../index.php?error=invalidfirstnamelastname");
-      exit();
-
-  }
-  // invalid first name
-  // this is for a basic name
-  // mmtuts has used it for a username
-  else if (!preg_match("/^[a-zA-Z0-9]*$/", $firstname)) {
-    header("Location: ../index.php?error=invalidfirstname&mail".$email);
+  if (uidExists($conn, $userName, $email) !== false) {
+    //header("location: ../signup.php");
+    //header("location: ../navigation.php?error=pwdsnomatch");
+    header("location: ../header.php?error=pwdsnomatch");
     exit();
-
   }
-  // invalid last name
-  // this is for a basic name
-  // mmtuts has used it for a username
-  else if (!preg_match("/^[a-zA-Z0-9]*$/", $lastname)) {
-    header("Location: ../index.php?error=invalidlastname&mail".$email);
-    exit();
 
-  }
-  // invalid passwords, the two dont match
-  else if ($password !== $passwordRepeat) {
-    header("Location: ../index.php?error=passwordcheck&firstname=".$firstname."&lastname".$lastname."&mail".$email);
-    exit();
+  createUser($conn, $firstName, $lastName, $address, $phone, $email, $gender, $dob, $userName, $pwd, $subscribe);
 
-  }
-  // check that the username is not already being used
-  // uses sql statement to check within the database
-  // uses a prepared statement
-  else {
 
-    $sql = "";
 
-  }
+  // add the others later!!
 
 }
+else {
+  //header("location: ../signup.php");
+  //header("location: ../navigation.php");
+  //header("location: ../header.php");
+  //echo "HERE WE ARE!!";
+  exit();
+}
+
+
 
 
 /**
@@ -84,4 +78,15 @@ if (isset($_POST['submit__signup']))   {
  * 54:20
  * 
  * 25.07
+ * 
+ * 
+ * Downloads/MMTUTS Downloads/PHP/php44.zip.php44 
  */
+
+
+
+ /**
+  * https://www.youtube.com/watch?v=gCo6JqGMi30
+  * 
+  * 58:45
+  */

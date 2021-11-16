@@ -28,7 +28,11 @@
 
     -->
 
+    <!--
+      Here, navigation.inc.php chooses between loging in or signing up
+     -->
     <form action="includes/navigation.inc.php" method="post">
+    <!--<form action="includes/signup.inc.php" method="post">-->
 
       <?php
         require "navigation.php";

@@ -95,11 +95,11 @@
     </li>
     <!-- First Name -->
     <li class="section-nav__item signup" id="item-firstname__signup">
-      <input class="section-nav__input" id="input-firstname" name="firstname" type="text" placeholder="First Name...">  
+      <input class="section-nav__input" id="input-firstname" name="firstname__signup" type="text" placeholder="First Name...">  
     </li>
     <!-- Last Name -->
     <li class="section-nav__item signup" id="item-lastname__signup">
-      <input class="section-nav__input" id="input-lastname" name="lastname" type="text" placeholder="Last Name...">  
+      <input class="section-nav__input" id="input-lastname" name="lastname__signup" type="text" placeholder="Last Name...">  
     </li>
     <!-- Address -->
     <li class="section-nav__item signup" id="item-address__signup">
@@ -164,7 +164,7 @@
       <div class="dob">
 
         <!-- Date Of Birth -->
-        <span class="section-nav__span" id="span-dob" name="dob">Date Of Birth</span>
+        <span class="section-nav__span" id="span-dob" name="dob__signup">Date Of Birth</span>
         <!-- Date Of Birth Calender Selector -->
         <ul class="section-dob">
 
@@ -208,7 +208,7 @@
       <label class="section-nav__label" id="label-yes" name="subscribe-label__signup" for="yes">
         Subscribe to our newsletter?
       </label>
-      <input class="section-nav__input" id="checkbox-subscribe" name="subscribe__signup" type="checkbox">
+      <input  type="checkbox" class="section-nav__input" id="checkbox-subscribe" name="subscribe__signup">
 
     </li>
 
@@ -256,5 +256,8 @@
   https://www.youtube.com/watch?v=LC9GaXkdxF8&t=187s
   upto - 15:41
   upto - 54:20
+
+  Updated
+  https://www.youtube.com/watch?v=gCo6JqGMi30
   -->
 

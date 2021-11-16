@@ -1,12 +1,12 @@
 
 <?php
 
-$servername = "localhost";
-$dbUsername = "root";
+$serverName = "localhost";
+$dbUserName = "root";
 $dbPassword = "";
-$dbName = "fox_spirit_v2";
+$dbName = "foxspirit_db";
 
-$conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
+$conn = mysqli_connect($serverName, $dbUserName, $dbPassword, $dbName);
 
 // Check if connection has failed, display error message
 if (!$conn) {
@@ -17,6 +17,11 @@ if (!$conn) {
 
 
 
+
+/**
+  https://www.youtube.com/watch?v=gCo6JqGMi30
+  44.15
+*/
 
 
 
